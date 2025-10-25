@@ -94,3 +94,66 @@
 
   console.log('%c[GM] burger ready', 'color:#7BD389');
 })();
+
+
+
+
+// ===================================
+// Galerie - Arată mai mult / mai puțin (responsiv: 4/6/8)
+// ===================================
+(function () {
+  const grid = document.getElementById('gallery-grid');
+  const btn = document.getElementById('show-more-btn');
+  if (!grid || !btn) return; // rulează doar pe pagina galeriei
+
+  const items = Array.from(grid.querySelectorAll('.gallery-item'));
+  let expanded = false; // stare: extins sau nu
+  let visibleCount = 0;
+
+  // Breakpoint-uri: <640px = 4, <1024px = 6, altfel 8
+  const getItemsPerPage = () => {
+    const w = window.innerWidth;
+    if (w < 640) return 4;       // telefon
+    if (w < 1024) return 6;      // tabletă
+    return 8;                    // desktop
+  };
+
+  const updateGallery = () => {
+    const perPage = getItemsPerPage();
+    visibleCount = perPage;
+
+    items.forEach((el, i) => {
+      const shouldHide = !expanded && i >= perPage;
+      el.classList.toggle('hidden', shouldHide);
+    });
+
+    if (items.length <= perPage) {
+      btn.style.display = 'none';
+    } else {
+      btn.style.display = 'block';
+      btn.textContent = expanded ? 'Arată mai puțin' : 'Arată mai mult';
+    }
+  };
+
+  // Toggle extins / restrâns
+  btn.addEventListener('click', () => {
+    expanded = !expanded;
+    updateGallery();
+  });
+
+  // Recalculează la redimensionare (debounce)
+  let resizeTO;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTO);
+    resizeTO = setTimeout(() => {
+      // dacă utilizatorul a extins, păstrăm extins,
+      // doar recalculăm câte să arătăm când e restrâns
+      updateGallery();
+    }, 150);
+  });
+
+  // Inițial: restrâns
+  updateGallery();
+})();
+
+

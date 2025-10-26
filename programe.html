@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programe Educaționale - Grădinița Model Târgoviște</title>
-    <meta name="description" content="Programe educaționale pentru copii 2-6 ani la Grădinița Model Târgoviște. Grupa Mini, Mijlocie și Mare cu activități adaptate fiecărei vârste.">
+    <title>Programele Noastre - Grădinița Model Târgoviște</title>
+    <meta name="description" content="Descoperă programele educaționale pentru copii 2-6 ani la Grădinița Model. Grupa Mini, Mijlocie și Mare cu activități adaptate fiecărei vârste.">
     <link rel="canonical" href="https://www.gradinita-model.ro/programe.html">
+    <meta property="og:title" content="Programele Noastre - Grădinița Model Târgoviște">
+    <meta property="og:description" content="Programe educaționale pentru copii 2-6 ani, adaptate nevoilor fiecărei vârste.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gradinita-model.ro/programe.html">
+    <meta property="og:image" content="https://www.gradinita-model.ro/images/og-image.jpg">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏫%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,252 +18,228 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Sari la conținut</a>
-    
-    <nav class="navbar" role="navigation" aria-label="Navigare principală">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
-                    <div class="logo-icon">🏫</div>
-                    <span>Grădinița Model</span>
-                </a>
+    <a href="#gm-main" class="gm-skip-link">Sari la conținut</a>
+
+    <nav class="gm-nav" role="navigation" aria-label="Navigare principală">
+        <div class="gm-nav__container">
+            <a href="index.html" class="gm-nav__logo" aria-label="Grădinița Model - Acasă">
+                <div class="gm-nav__logo-icon">🏫</div>
+                <span class="gm-nav__logo-text">Grădinița Model</span>
+            </a>
+
+            <ul class="gm-nav__links">
+                <li><a href="despre.html" class="gm-nav__link">Despre</a></li>
+                <li><a href="programe.html" class="gm-nav__link">Programe</a></li>
+                <li><a href="activitati.html" class="gm-nav__link">Activități</a></li>
+                <li><a href="proiecte-erasmus.html" class="gm-nav__link">Proiecte Erasmus+</a></li>
+                <li><a href="galerie.html" class="gm-nav__link">Galerie</a></li>
+                <li><a href="contact.html" class="gm-nav__link">Contact</a></li>
+            </ul>
+
+            <div class="gm-nav__cta">
+                <a href="inscrieri.html" class="gm-btn gm-btn--primary">Înscrie-ți copilul</a>
             </div>
-            
-            <div class="nav-center">
-                <ul class="nav-links">
-                    <li><a href="despre.html">Despre</a></li>
-                    <li><a href="programe.html" aria-current="page">Programe</a></li>
-                    <li><a href="activitati.html">Activități</a></li>
-                    <li><a href="galerie.html">Galerie</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="nav-right">
-                <a href="inscrieri.html" class="btn-primary">Înscrie-ți copilul</a>
-            </div>
-            
-            <button class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <button class="gm-nav__toggle" aria-label="Meniu" aria-expanded="false" aria-controls="gm-mobile-menu">
+                <span class="gm-nav__toggle-line"></span>
+                <span class="gm-nav__toggle-line"></span>
+                <span class="gm-nav__toggle-line"></span>
             </button>
         </div>
-        
-        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
-            <a href="despre.html">Despre</a>
-            <a href="programe.html">Programe</a>
-            <a href="activitati.html">Activități</a>
-            <a href="galerie.html">Galerie</a>
-            <a href="contact.html">Contact</a>
-            <a href="inscrieri.html">Înscrieri</a>
+
+        <div id="gm-mobile-menu" class="gm-mobile-menu" aria-hidden="true">
+            <a href="despre.html" class="gm-mobile-menu__link">Despre</a>
+            <a href="programe.html" class="gm-mobile-menu__link">Programe</a>
+            <a href="activitati.html" class="gm-mobile-menu__link">Activități</a>
+            <a href="proiecte-erasmus.html" class="gm-mobile-menu__link">Proiecte Erasmus+</a>
+            <a href="galerie.html" class="gm-mobile-menu__link">Galerie</a>
+            <a href="contact.html" class="gm-mobile-menu__link">Contact</a>
+            <a href="inscrieri.html" class="gm-mobile-menu__link">Înscrieri</a>
         </div>
     </nav>
-    
-    <header class="page-header">
-        <div class="container">
-            <h1>Programele noastre educaționale</h1>
-            <p>Fiecare vârstă are nevoile ei speciale de dezvoltare</p>
+
+    <header class="gm-page-header">
+        <div class="gm-container">
+            <h1 class="gm-page-header__title">Programele noastre</h1>
+            <p class="gm-page-header__subtitle">Educație personalizată pentru fiecare vârstă și etapă de dezvoltare</p>
         </div>
     </header>
-    
-    <main id="main">
-        <!-- Grupa Mini -->
-        <section style="padding: 4rem 1.5rem;">
-            <div class="container">
-                <div style="background: var(--white); border-radius: 24px; padding: 3rem 2rem; box-shadow: 0 8px 24px rgba(43, 47, 56, 0.1); margin-bottom: 4rem;">
-                    <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, var(--pink), var(--yellow)); border-radius: 16px; color: var(--white); margin-bottom: 2rem;">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🎓</div>
-                        <h2>Grupa Mare</h2>
-                        <p style="font-size: 1.125rem; opacity: 0.95;">5-6 ani</p>
+
+    <main id="gm-main">
+        <section class="gm-section">
+            <div class="gm-container">
+                <div class="gm-programs__grid">
+                    <article class="gm-card gm-card--program gm-card--program-detail">
+                        <div class="gm-card__header gm-card__header--mini">
+                            <div class="gm-card__icon">🍼</div>
+                            <h2 class="gm-card__title">Grupa Mini</h2>
+                            <p class="gm-card__age">2-3 ani</p>
+                        </div>
+                        <div class="gm-card__body">
+                            <p class="gm-card__text">
+                                Primii pași în comunitate, într-un mediu cald și protejat. Copiii explorează prin 
+                                activități senzoriale, jocuri simple și interacțiuni ghidate cu colegii.
+                            </p>
+                            <h3 class="gm-card__subtitle">Competențe dezvoltate:</h3>
+                            <ul class="gm-card__list">
+                                <li>Dezvoltare senzorială și motrică</li>
+                                <li>Limbaj și comunicare de bază</li>
+                                <li>Socializare primară</li>
+                                <li>Autonomie personală</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="gm-card gm-card--program gm-card--program-detail">
+                        <div class="gm-card__header gm-card__header--mijlocie">
+                            <div class="gm-card__icon">🎨</div>
+                            <h2 class="gm-card__title">Grupa Mijlocie</h2>
+                            <p class="gm-card__age">3-4 ani</p>
+                        </div>
+                        <div class="gm-card__body">
+                            <p class="gm-card__text">
+                                Explorare creativă și dezvoltare socială intensă. Artă, muzică, povești și primele 
+                                noțiuni educative într-un cadru jucăuș și stimulativ.
+                            </p>
+                            <h3 class="gm-card__subtitle">Competențe dezvoltate:</h3>
+                            <ul class="gm-card__list">
+                                <li>Creativitate și exprimare artistică</li>
+                                <li>Dezvoltare limbaj și vocabular</li>
+                                <li>Abilități sociale complexe</li>
+                                <li>Gândire logică elementară</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="gm-card gm-card--program gm-card--program-detail">
+                        <div class="gm-card__header gm-card__header--mare">
+                            <div class="gm-card__icon">🎓</div>
+                            <h2 class="gm-card__title">Grupa Mare</h2>
+                            <p class="gm-card__age">5-6 ani</p>
+                        </div>
+                        <div class="gm-card__body">
+                            <p class="gm-card__text">
+                                Pregătire pentru școală într-un mod natural și plăcut. Pre-scriere, pre-citire, 
+                                matematică aplicată și dezvoltarea independenței.
+                            </p>
+                            <h3 class="gm-card__subtitle">Competențe dezvoltate:</h3>
+                            <ul class="gm-card__list">
+                                <li>Pre-scriere și pre-citire</li>
+                                <li>Matematică de bază aplicată</li>
+                                <li>Gândire critică și rezolvare probleme</li>
+                                <li>Pregătire pentru școală</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="gm-section gm-section--alt">
+            <div class="gm-container">
+                <h2 class="gm-section__title">Programul zilnic</h2>
+                <p class="gm-section__subtitle">O zi tipică la Grădinița Model</p>
+
+                <div class="gm-schedule">
+                    <div class="gm-schedule__item">
+                        <div class="gm-schedule__time">07:30 - 08:30</div>
+                        <div class="gm-schedule__activity">Primire copii, joc liber</div>
                     </div>
-                    
-                    <h3 style="margin-bottom: 1rem; color: var(--green);">Pregătire pentru școală</h3>
-                    <p style="margin-bottom: 2rem;">
-                        Grupa Mare pregătește copiii pentru școală într-un mod natural și plăcut. Activitățile 
-                        includ pre-scriere, pre-citire, matematică aplicată și proiecte tematice.
-                    </p>
-                    
-                    <div style="background: var(--light); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
-                        <h4 style="margin-bottom: 1rem;">🕐 Program zilnic orientativ</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>07:30 - 09:00:</strong> Primire, jocuri educative</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>09:00 - 09:30:</strong> Micul dejun</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>09:30 - 12:00:</strong> Activități educative structurate</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>12:00 - 13:00:</strong> Joacă activă exterior</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>13:00 - 14:00:</strong> Prânz</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>14:00 - 15:00:</strong> Relaxare/activități liniștite</li>
-                            <li style="padding: 0.5rem 0;"><strong>15:00 - 17:30:</strong> Activități opționale și plecare</li>
-                        </ul>
+                    <div class="gm-schedule__item">
+                        <div class="gm-schedule__time">08:30 - 09:00</div>
+                        <div class="gm-schedule__activity">Micul dejun</div>
                     </div>
-                    
-                    <h4 style="margin-bottom: 1rem;">🌟 Competențe dezvoltate</h4>
-                    <div style="display: grid; gap: 1rem;">
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>✍️ Pre-scriere și pre-citire:</strong> Scris litere, citit silabe, înțelegere text simplu
-                        </div>
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>🔢 Matematică:</strong> Numere până la 20, adunări/scăderi simple, forme geometrice
-                        </div>
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>🤝 Abilități sociale avansate:</strong> Leadership, negociere, cooperare
-                        </div>
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>📋 Organizare:</strong> Responsabilitate, planificare, finalizare sarcini
-                        </div>
+                    <div class="gm-schedule__item">
+                        <div class="gm-schedule__time">09:00 - 10:30</div>
+                        <div class="gm-schedule__activity">Activități educaționale</div>
+                    </div>
+                    <div class="gm-schedule__item">
+                        <div class="gm-schedule__time">10:30 - 11:00</div>
+                        <div class="gm-schedule__activity">Gustare și joc în curte</div>
+                    </div>
+                    <div class="gm-schedule__item">
+                        <div class="gm-schedule__time">11:00 - 12:00</div>
+                        <div class="gm-schedule__activity">Activități creative/sport</div>
+                    </div>
+                    <div class="gm-schedule__item">
+                        <div class="gm-schedule__time">12:00 - 13:00</div>
+                        <div class="gm-schedule__activity">Prânz</div>
+                    </div>
+                    <div class="gm-schedule__item">
+                        <div class="gm-schedule__time">13:00 - 15:00</div>
+                        <div class="gm-schedule__activity">Odihnă</div>
+                    </div>
+                    <div class="gm-schedule__item">
+                        <div class="gm-schedule__time">15:00 - 15:30</div>
+                        <div class="gm-schedule__activity">Gustare</div>
+                    </div>
+                    <div class="gm-schedule__item">
+                        <div class="gm-schedule__time">15:30 - 17:30</div>
+                        <div class="gm-schedule__activity">Joc liber, predare copii</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section style="background: linear-gradient(135deg, rgba(115, 184, 240, 0.1), rgba(123, 211, 137, 0.1)); padding: 4rem 1.5rem; text-align: center;">
-            <div class="container">
-                <h2>Care program se potrivește copilului tău?</h2>
-                <p style="font-size: 1.125rem; color: var(--gray); margin: 1rem 0 2rem;">
-                    Contactează-ne pentru o consultație gratuită și descoperă grupul ideal.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="inscrieri.html" class="btn-primary">Înscrie-ți copilul</a>
-                    <a href="contact.html" class="btn-secondary">Programează o vizită</a>
+        <section class="gm-section gm-section--cta">
+            <div class="gm-container">
+                <div class="gm-cta__content">
+                    <h2 class="gm-cta__title">Alege programul potrivit pentru copilul tău</h2>
+                    <p class="gm-cta__text">Înscrie-te acum sau programează o vizită pentru a cunoaște echipa și facilitățile noastre.</p>
+                    <div class="gm-cta__buttons">
+                        <a href="inscrieri.html" class="gm-btn gm-btn--primary">Înscrie-ți copilul</a>
+                        <a href="contact.html" class="gm-btn gm-btn--secondary">Programează o vizită</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Grădinița Model</h3>
-                    <p>Educație timpurie de calitate în Târgoviște. Creștem curiozitatea și încrederea copiilor.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
-                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                        <a href="#" class="social-link" aria-label="YouTube">📹</a>
+
+    <footer class="gm-footer">
+        <div class="gm-container">
+            <div class="gm-footer__content">
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Grădinița Model</h3>
+                    <p class="gm-footer__text">Educație timpurie de calitate în Târgoviște. Creștem curiozitatea și încrederea copiilor.</p>
+                    <div class="gm-footer__social">
+                        <a href="#" class="gm-footer__social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="gm-footer__social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="gm-footer__social-link" aria-label="YouTube">📹</a>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Linkuri rapide</h3>
-                    <ul>
-                        <li><a href="despre.html">Despre noi</a></li>
-                        <li><a href="programe.html">Programe</a></li>
-                        <li><a href="activitati.html">Activități</a></li>
-                        <li><a href="galerie.html">Galerie</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="inscrieri.html">Înscrieri</a></li>
+
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Linkuri rapide</h3>
+                    <ul class="gm-footer__list">
+                        <li><a href="despre.html" class="gm-footer__link">Despre noi</a></li>
+                        <li><a href="programe.html" class="gm-footer__link">Programe</a></li>
+                        <li><a href="activitati.html" class="gm-footer__link">Activități</a></li>
+                        <li><a href="proiecte-erasmus.html" class="gm-footer__link">Proiecte Erasmus+</a></li>
+                        <li><a href="galerie.html" class="gm-footer__link">Galerie</a></li>
+                        <li><a href="contact.html" class="gm-footer__link">Contact</a></li>
+                        <li><a href="inscrieri.html" class="gm-footer__link">Înscrieri</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <ul>
+
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Contact</h3>
+                    <ul class="gm-footer__list">
                         <li>📍 Str. Mihai Viteazul nr. 45</li>
                         <li>Târgoviște, Dâmbovița</li>
-                        <li>📞 <a href="tel:+40745123456">+40 745 123 456</a></li>
-                        <li>✉️ <a href="mailto:contact@gradinita-model.ro">contact@gradinita-model.ro</a></li>
+                        <li>📞 <a href="tel:+40745123456" class="gm-footer__link">+40 745 123 456</a></li>
+                        <li>✉️ <a href="mailto:contact@gradinita-model.ro" class="gm-footer__link">contact@gradinita-model.ro</a></li>
                         <li>🕐 L-V: 07:30 - 17:30</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
+
+            <div class="gm-footer__bottom">
                 <p>&copy; 2025 Grădinița Model, Târgoviște. Toate drepturile rezervate.</p>
-                <p><a href="politica-confidentialitate.html">Politica de confidențialitate</a></p>
+                <p><a href="politica-confidentialitate.html" class="gm-footer__link">Politica de confidențialitate</a></p>
             </div>
         </div>
     </footer>
-    
+
     <script src="js/script.js"></script>
 </body>
-</html>rem;">🍼</div>
-                        <h2>Grupa Mini</h2>
-                        <p style="font-size: 1.125rem; opacity: 0.95;">2-3 ani</p>
-                    </div>
-                    
-                    <h3 style="margin-bottom: 1rem; color: var(--green);">Primii pași în comunitate</h3>
-                    <p style="margin-bottom: 2rem;">
-                        Grupa Mini este perfect adaptată pentru copiii care fac primii pași în comunitate. 
-                        Într-un mediu cald și protejat, micuții explorează lumea prin joacă, activități senzoriale 
-                        și rutine care le oferă siguranță și confort.
-                    </p>
-                    
-                    <div style="background: var(--light); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
-                        <h4 style="margin-bottom: 1rem;">🕐 Program zilnic orientativ</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>07:30 - 09:00:</strong> Primire copii, joc liber</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>09:00 - 09:30:</strong> Micul dejun</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>09:30 - 11:00:</strong> Activități ghidate</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>11:00 - 12:00:</strong> Joacă în curte</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>12:00 - 13:00:</strong> Prânz și igienă</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>13:00 - 15:00:</strong> Somn</li>
-                            <li style="padding: 0.5rem 0;"><strong>15:00 - 17:30:</strong> Gustare și plecare</li>
-                        </ul>
-                    </div>
-                    
-                    <h4 style="margin-bottom: 1rem;">🌟 Competențe dezvoltate</h4>
-                    <div style="display: grid; gap: 1rem; margin-bottom: 2rem;">
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>🗣️ Limbaj și comunicare:</strong> Vocabular de bază, exprimarea nevoilor, cântece simple
-                        </div>
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>🤸 Dezvoltare motrică:</strong> Coordonare mână-ochi, mersul, manipularea obiectelor
-                        </div>
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>👶 Autonomie personală:</strong> Igienă de bază, mâncat singur, îmbrăcat cu ajutor
-                        </div>
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>🤗 Socializare primară:</strong> Interacțiune cu alți copii, împărtășirea jucăriilor
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Grupa Mijlocie -->
-                <div style="background: var(--white); border-radius: 24px; padding: 3rem 2rem; box-shadow: 0 8px 24px rgba(43, 47, 56, 0.1); margin-bottom: 4rem;">
-                    <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, var(--green), var(--blue)); border-radius: 16px; color: var(--white); margin-bottom: 2rem;">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🎨</div>
-                        <h2>Grupa Mijlocie</h2>
-                        <p style="font-size: 1.125rem; opacity: 0.95;">3-4 ani</p>
-                    </div>
-                    
-                    <h3 style="margin-bottom: 1rem; color: var(--green);">Explorare creativă și dezvoltare socială</h3>
-                    <p style="margin-bottom: 2rem;">
-                        La grupa Mijlocie, copiii trăiesc o perioadă de explorare intensă. Activitățile includ 
-                        artă, muzică, dans, povești interactive și primele noțiuni de matematică și litere.
-                    </p>
-                    
-                    <div style="background: var(--light); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
-                        <h4 style="margin-bottom: 1rem;">🕐 Program zilnic orientativ</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>07:30 - 09:00:</strong> Primire, activități de dimineață</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>09:00 - 09:30:</strong> Micul dejun</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>09:30 - 11:30:</strong> Activități educative</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>11:30 - 12:30:</strong> Joacă în curte</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>12:30 - 13:30:</strong> Prânz</li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(43, 47, 56, 0.1);"><strong>13:30 - 15:00:</strong> Odihnă</li>
-                            <li style="padding: 0.5rem 0;"><strong>15:00 - 17:30:</strong> Activități variate și plecare</li>
-                        </ul>
-                    </div>
-                    
-                    <h4 style="margin-bottom: 1rem;">🌟 Competențe dezvoltate</h4>
-                    <div style="display: grid; gap: 1rem;">
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>💬 Exprimare verbală:</strong> Propoziții complexe, povestire, vocabular îmbogățit
-                        </div>
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>🎭 Creativitate:</strong> Imaginație, joc de rol, expresie artistică
-                        </div>
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>👥 Colaborare:</strong> Lucru în echipă, rezolvare conflicte, empatie
-                        </div>
-                        <div style="background: var(--light); padding: 1.5rem; border-radius: 12px;">
-                            <strong>🔢 Noțiuni preșcolare:</strong> Recunoaștere culori, forme, numere, litere
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Grupa Mare -->
-                <div style="background: var(--white); border-radius: 24px; padding: 3rem 2rem; box-shadow: 0 8px 24px rgba(43, 47, 56, 0.1);">
-                    <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, var(--blue), var(--pink)); border-radius: 16px; color: var(--white); margin-bottom: 2rem;">
-                        <div style="font-size: 4rem; margin-bottom: 1
+</html>

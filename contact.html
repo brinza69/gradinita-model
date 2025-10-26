@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Grădinița Model Târgoviște</title>
-    <meta name="description" content="Contactează Grădinița Model din Târgoviște. Telefon, email, adresă și hartă. Programează o vizită sau solicită informații.">
+    <meta name="description" content="Contactează Grădinița Model din Târgoviște. Program, adresă, telefon și hartă. Suntem aici să răspundem la toate întrebările tale.">
     <link rel="canonical" href="https://www.gradinita-model.ro/contact.html">
+    <meta property="og:title" content="Contact - Grădinița Model Târgoviște">
+    <meta property="og:description" content="Contactează-ne pentru mai multe informații despre Grădinița Model din Târgoviște.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gradinita-model.ro/contact.html">
+    <meta property="og:image" content="https://www.gradinita-model.ro/images/og-image.jpg">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏫%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,211 +18,227 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Sari la conținut</a>
-    
-    <nav class="navbar" role="navigation" aria-label="Navigare principală">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
-                    <div class="logo-icon">🏫</div>
-                    <span>Grădinița Model</span>
-                </a>
+    <a href="#gm-main" class="gm-skip-link">Sari la conținut</a>
+
+    <nav class="gm-nav" role="navigation" aria-label="Navigare principală">
+        <div class="gm-nav__container">
+            <a href="index.html" class="gm-nav__logo" aria-label="Grădinița Model - Acasă">
+                <div class="gm-nav__logo-icon">🏫</div>
+                <span class="gm-nav__logo-text">Grădinița Model</span>
+            </a>
+
+            <ul class="gm-nav__links">
+                <li><a href="despre.html" class="gm-nav__link">Despre</a></li>
+                <li><a href="programe.html" class="gm-nav__link">Programe</a></li>
+                <li><a href="activitati.html" class="gm-nav__link">Activități</a></li>
+                <li><a href="proiecte-erasmus.html" class="gm-nav__link">Proiecte Erasmus+</a></li>
+                <li><a href="galerie.html" class="gm-nav__link">Galerie</a></li>
+                <li><a href="contact.html" class="gm-nav__link">Contact</a></li>
+            </ul>
+
+            <div class="gm-nav__cta">
+                <a href="inscrieri.html" class="gm-btn gm-btn--primary">Înscrie-ți copilul</a>
             </div>
-            
-            <div class="nav-center">
-                <ul class="nav-links">
-                    <li><a href="despre.html">Despre</a></li>
-                    <li><a href="programe.html">Programe</a></li>
-                    <li><a href="activitati.html">Activități</a></li>
-                    <li><a href="galerie.html">Galerie</a></li>
-                    <li><a href="contact.html" aria-current="page">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="nav-right">
-                <a href="inscrieri.html" class="btn-primary">Înscrie-ți copilul</a>
-            </div>
-            
-            <button class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <button class="gm-nav__toggle" aria-label="Meniu" aria-expanded="false" aria-controls="gm-mobile-menu">
+                <span class="gm-nav__toggle-line"></span>
+                <span class="gm-nav__toggle-line"></span>
+                <span class="gm-nav__toggle-line"></span>
             </button>
         </div>
-        
-        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
-            <a href="despre.html">Despre</a>
-            <a href="programe.html">Programe</a>
-            <a href="activitati.html">Activități</a>
-            <a href="galerie.html">Galerie</a>
-            <a href="contact.html">Contact</a>
-            <a href="inscrieri.html">Înscrieri</a>
+
+        <div id="gm-mobile-menu" class="gm-mobile-menu" aria-hidden="true">
+            <a href="despre.html" class="gm-mobile-menu__link">Despre</a>
+            <a href="programe.html" class="gm-mobile-menu__link">Programe</a>
+            <a href="activitati.html" class="gm-mobile-menu__link">Activități</a>
+            <a href="proiecte-erasmus.html" class="gm-mobile-menu__link">Proiecte Erasmus+</a>
+            <a href="galerie.html" class="gm-mobile-menu__link">Galerie</a>
+            <a href="contact.html" class="gm-mobile-menu__link">Contact</a>
+            <a href="inscrieri.html" class="gm-mobile-menu__link">Înscrieri</a>
         </div>
     </nav>
-    
-    <header class="page-header">
-        <div class="container">
-            <h1>Contactează-ne</h1>
-            <p>Suntem aici să răspundem la toate întrebările tale</p>
+
+    <header class="gm-page-header">
+        <div class="gm-container">
+            <h1 class="gm-page-header__title">Contact</h1>
+            <p class="gm-page-header__subtitle">Suntem aici pentru tine și copilul tău</p>
         </div>
     </header>
-    
-    <main id="main">
-        <section class="contact-section">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-details">
-                                <h3>Adresă</h3>
-                                <p>Str. Mihai Viteazul nr. 45<br>Târgoviște, Dâmbovița 130024<br>România</p>
+
+    <main id="gm-main">
+        <section class="gm-section">
+            <div class="gm-container">
+                <div class="gm-contact__grid">
+                    <div class="gm-contact__info">
+                        <div class="gm-contact__item">
+                            <div class="gm-contact__icon">📍</div>
+                            <div class="gm-contact__details">
+                                <h3 class="gm-contact__title">Adresa</h3>
+                                <p class="gm-contact__text">Str. Mihai Viteazul nr. 45</p>
+                                <p class="gm-contact__text">Târgoviște, Dâmbovița 130024</p>
                             </div>
                         </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div class="contact-details">
-                                <h3>Telefon</h3>
-                                <p><a href="tel:+40745123456">+40 745 123 456</a></p>
-                                <p class="contact-hours">Luni - Vineri: 07:30 - 17:30<br>Sâmbătă - Duminică: Închis</p>
+
+                        <div class="gm-contact__item">
+                            <div class="gm-contact__icon">📞</div>
+                            <div class="gm-contact__details">
+                                <h3 class="gm-contact__title">Telefon</h3>
+                                <p class="gm-contact__text">
+                                    <a href="tel:+40745123456" class="gm-contact__link">+40 745 123 456</a>
+                                </p>
+                                <p class="gm-contact__text gm-contact__text--small">Luni - Vineri: 07:30 - 17:30</p>
                             </div>
                         </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">✉️</div>
-                            <div class="contact-details">
-                                <h3>Email</h3>
-                                <p><a href="mailto:contact@gradinita-model.ro">contact@gradinita-model.ro</a></p>
-                                <p class="contact-hours">Răspundem în maximum 24 de ore</p>
+
+                        <div class="gm-contact__item">
+                            <div class="gm-contact__icon">✉️</div>
+                            <div class="gm-contact__details">
+                                <h3 class="gm-contact__title">Email</h3>
+                                <p class="gm-contact__text">
+                                    <a href="mailto:contact@gradinita-model.ro" class="gm-contact__link">contact@gradinita-model.ro</a>
+                                </p>
+                                <p class="gm-contact__text gm-contact__text--small">Răspundem în maxim 24h</p>
                             </div>
                         </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">🕐</div>
-                            <div class="contact-details">
-                                <h3>Program</h3>
-                                <p><strong>Luni - Vineri:</strong> 07:30 - 17:30<br><strong>Weekend:</strong> Închis</p>
-                                <p class="contact-hours">Vizitele se fac doar cu programare</p>
+
+                        <div class="gm-contact__item">
+                            <div class="gm-contact__icon">🕐</div>
+                            <div class="gm-contact__details">
+                                <h3 class="gm-contact__title">Program</h3>
+                                <p class="gm-contact__text">Luni - Vineri: 07:30 - 17:30</p>
+                                <p class="gm-contact__text">Sâmbătă - Duminică: Închis</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="map-container">
-                        <div class="map-placeholder" role="img" aria-label="Hartă locație Grădinița Model">🗺️</div>
-                        <!-- Pentru a adăuga hartă reală Google Maps, înlocuiește div-ul de mai sus cu:
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                        -->
+
+                    <div class="gm-map">
+                        <div class="gm-map__placeholder">
+                            <div class="gm-map__icon">🗺️</div>
+                            <p class="gm-map__text">Hartă Google Maps</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="faq-section">
-            <div class="container">
-                <h2 class="section-title">Întrebări frecvente</h2>
-                <p class="section-subtitle">Răspunsuri rapide la cele mai comune întrebări</p>
-                
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <h3>Care sunt orele de program?</h3>
-                        <p>Grădinița este deschisă Luni - Vineri, între 07:30 și 17:30. Copiii pot fi aduși între 07:30-09:00 și preluați între 15:30-17:30. Oferim flexibilitate pentru părinții cu program de lucru strict.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Pot să vizitez grădinița înainte de înscriere?</h3>
-                        <p>Da, absolut! Încurajăm părinții să ne viziteze înainte de a lua o decizie. Poți programa o vizită completând formularul de pe pagina de <a href="inscrieri.html">înscrieri</a> sau sunându-ne direct. Vizitele se fac în zile lucrătoare, preferabil după-amiaza.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Care sunt tarifele?</h3>
-                        <p>Tarifele variază în funcție de grupa de vârstă și pachetul ales (full-time sau part-time). Pentru informații detaliate despre tarife și ce este inclus, te rugăm să ne contactezi telefonic sau prin email. Oferim și reduceri pentru frați.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Ce documente sunt necesare pentru înscriere?</h3>
-                        <p>Pentru înscriere ai nevoie de: certificat de naștere al copilului (copie), carnet de sănătate la zi, adeverință medicală pentru colectivitate, CI/BI părinte (copie), și formular de înscriere completat. Lista completă o primești la vizită sau prin email.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Oferă grădinița masă?</h3>
-                        <p>Da, oferim 3 mese pe zi: mic dejun, prânz și gustare după-amiază. Meniul este pregătit zilnic cu ingrediente proaspete și este aprobat de un nutriționist. Respectăm orice alergii sau restricții alimentare.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Cum este asigurată siguranța copiilor?</h3>
-                        <p>Siguranța este prioritatea noastră: sistem de supraveghere video, acces controlat cu acreditare, personal calificat în prim-ajutor, raport educatoare:copii optim (1:10-15), protocol strict de predare-preluare copii, și echipamente de joacă certificate.</p>
-                    </div>
+        <section class="gm-section gm-section--alt">
+            <div class="gm-container">
+                <div class="gm-form-wrapper">
+                    <h2 class="gm-form__title">Trimite-ne un mesaj</h2>
+                    <p class="gm-form__subtitle">Completează formularul și te vom contacta în cel mai scurt timp.</p>
+
+                    <form id="gm-contact-form" class="gm-form" novalidate>
+                        <div class="gm-form__group">
+                            <label for="gm-contact-name" class="gm-form__label">Nume complet *</label>
+                            <input type="text" id="gm-contact-name" name="name" class="gm-form__input" required>
+                            <span class="gm-form__error" id="gm-contact-name-error"></span>
+                        </div>
+
+                        <div class="gm-form__group">
+                            <label for="gm-contact-email" class="gm-form__label">Email *</label>
+                            <input type="email" id="gm-contact-email" name="email" class="gm-form__input" required>
+                            <span class="gm-form__error" id="gm-contact-email-error"></span>
+                        </div>
+
+                        <div class="gm-form__group">
+                            <label for="gm-contact-phone" class="gm-form__label">Telefon</label>
+                            <input type="tel" id="gm-contact-phone" name="phone" class="gm-form__input">
+                        </div>
+
+                        <div class="gm-form__group">
+                            <label for="gm-contact-subject" class="gm-form__label">Subiect *</label>
+                            <select id="gm-contact-subject" name="subject" class="gm-form__input" required>
+                                <option value="">Selectează subiectul</option>
+                                <option value="inscriere">Informații înscriere</option>
+                                <option value="vizita">Programare vizită</option>
+                                <option value="Programe">Întrebări despre programe</option>
+                                <option value="altele">Altele</option>
+                            </select>
+                            <span class="gm-form__error" id="gm-contact-subject-error"></span>
+                        </div>
+
+                        <div class="gm-form__group">
+                            <label for="gm-contact-message" class="gm-form__label">Mesaj *</label>
+                            <textarea id="gm-contact-message" name="message" class="gm-form__textarea" rows="5" required></textarea>
+                            <span class="gm-form__error" id="gm-contact-message-error"></span>
+                        </div>
+
+                        <div class="gm-form__group gm-form__group--checkbox">
+                            <input type="checkbox" id="gm-contact-consent" name="consent" class="gm-form__checkbox" required>
+                            <label for="gm-contact-consent" class="gm-form__checkbox-label">
+                                Sunt de acord cu prelucrarea datelor personale conform 
+                                <a href="politica-confidentialitate.html" class="gm-form__link">politicii de confidențialitate</a> *
+                            </label>
+                            <span class="gm-form__error" id="gm-contact-consent-error"></span>
+                        </div>
+
+                        <div class="gm-form__feedback" id="gm-contact-form-feedback"></div>
+
+                        <button type="submit" class="gm-btn gm-btn--primary gm-btn--full">Trimite mesajul</button>
+                    </form>
                 </div>
             </div>
         </section>
 
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Încă ai întrebări?</h2>
-                    <p>Suntem aici să te ajutăm! Nu ezita să ne contactezi telefonic sau prin email.</p>
-                    <div class="cta-buttons">
-                        <a href="tel:+40745123456" class="btn-primary">Sună-ne acum</a>
-                        <a href="inscrieri.html" class="btn-secondary">Programează o vizită</a>
+        <section class="gm-section gm-section--cta">
+            <div class="gm-container">
+                <div class="gm-cta__content">
+                    <h2 class="gm-cta__title">Vrei să ne vizitezi?</h2>
+                    <p class="gm-cta__text">Programează o vizită și descoperă atmosfera călduroasă a Grădiniței Model.</p>
+                    <div class="gm-cta__buttons">
+                        <a href="inscrieri.html" class="gm-btn gm-btn--primary">Înscrie-ți copilul</a>
+                        <a href="tel:+40745123456" class="gm-btn gm-btn--secondary">Sună acum</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Grădinița Model</h3>
-                    <p>Educație timpurie de calitate în Târgoviște. Creștem curiozitatea și încrederea copiilor.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
-                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                        <a href="#" class="social-link" aria-label="YouTube">📹</a>
+
+    <footer class="gm-footer">
+        <div class="gm-container">
+            <div class="gm-footer__content">
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Grădinița Model</h3>
+                    <p class="gm-footer__text">Educație timpurie de calitate în Târgoviște. Creștem curiozitatea și încrederea copiilor.</p>
+                    <div class="gm-footer__social">
+                        <a href="#" class="gm-footer__social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="gm-footer__social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="gm-footer__social-link" aria-label="YouTube">📹</a>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Linkuri rapide</h3>
-                    <ul>
-                        <li><a href="despre.html">Despre noi</a></li>
-                        <li><a href="programe.html">Programe</a></li>
-                        <li><a href="activitati.html">Activități</a></li>
-                        <li><a href="galerie.html">Galerie</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="inscrieri.html">Înscrieri</a></li>
+
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Linkuri rapide</h3>
+                    <ul class="gm-footer__list">
+                        <li><a href="despre.html" class="gm-footer__link">Despre noi</a></li>
+                        <li><a href="programe.html" class="gm-footer__link">Programe</a></li>
+                        <li><a href="activitati.html" class="gm-footer__link">Activități</a></li>
+                        <li><a href="proiecte-erasmus.html" class="gm-footer__link">Proiecte Erasmus+</a></li>
+                        <li><a href="galerie.html" class="gm-footer__link">Galerie</a></li>
+                        <li><a href="contact.html" class="gm-footer__link">Contact</a></li>
+                        <li><a href="inscrieri.html" class="gm-footer__link">Înscrieri</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <ul>
+
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Contact</h3>
+                    <ul class="gm-footer__list">
                         <li>📍 Str. Mihai Viteazul nr. 45</li>
                         <li>Târgoviște, Dâmbovița</li>
-                        <li>📞 <a href="tel:+40745123456">+40 745 123 456</a></li>
-                        <li>✉️ <a href="mailto:contact@gradinita-model.ro">contact@gradinita-model.ro</a></li>
+                        <li>📞 <a href="tel:+40745123456" class="gm-footer__link">+40 745 123 456</a></li>
+                        <li>✉️ <a href="mailto:contact@gradinita-model.ro" class="gm-footer__link">contact@gradinita-model.ro</a></li>
                         <li>🕐 L-V: 07:30 - 17:30</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
+
+            <div class="gm-footer__bottom">
                 <p>&copy; 2025 Grădinița Model, Târgoviște. Toate drepturile rezervate.</p>
-                <p><a href="politica-confidentialitate.html">Politica de confidențialitate</a></p>
+                <p><a href="politica-confidentialitate.html" class="gm-footer__link">Politica de confidențialitate</a></p>
             </div>
         </div>
     </footer>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>

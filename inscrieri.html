@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Înscrieri - Grădinița Model Târgoviște</title>
-    <meta name="description" content="Înscrie-ți copilul la Grădinița Model Târgoviște. Completează formularul de înscriere și te vom contacta în cel mai scurt timp.">
+    <meta name="description" content="Înscrie-ți copilul la Grădinița Model din Târgoviște. Proces simplu, documentație clară și echipă prietenoasă gata să vă ajute.">
     <link rel="canonical" href="https://www.gradinita-model.ro/inscrieri.html">
+    <meta property="og:title" content="Înscrieri - Grădinița Model Târgoviște">
+    <meta property="og:description" content="Înscrie-ți copilul la Grădinița Model. Proces simplu și transparent.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gradinita-model.ro/inscrieri.html">
+    <meta property="og:image" content="https://www.gradinita-model.ro/images/og-image.jpg">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏫%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,263 +18,224 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Sari la conținut</a>
-    
-    <nav class="navbar" role="navigation" aria-label="Navigare principală">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
-                    <div class="logo-icon">🏫</div>
-                    <span>Grădinița Model</span>
-                </a>
+    <a href="#gm-main" class="gm-skip-link">Sari la conținut</a>
+
+    <nav class="gm-nav" role="navigation" aria-label="Navigare principală">
+        <div class="gm-nav__container">
+            <a href="index.html" class="gm-nav__logo" aria-label="Grădinița Model - Acasă">
+                <div class="gm-nav__logo-icon">🏫</div>
+                <span class="gm-nav__logo-text">Grădinița Model</span>
+            </a>
+
+            <ul class="gm-nav__links">
+                <li><a href="despre.html" class="gm-nav__link">Despre</a></li>
+                <li><a href="programe.html" class="gm-nav__link">Programe</a></li>
+                <li><a href="activitati.html" class="gm-nav__link">Activități</a></li>
+                <li><a href="proiecte-erasmus.html" class="gm-nav__link">Proiecte Erasmus+</a></li>
+                <li><a href="galerie.html" class="gm-nav__link">Galerie</a></li>
+                <li><a href="contact.html" class="gm-nav__link">Contact</a></li>
+            </ul>
+
+            <div class="gm-nav__cta">
+                <a href="inscrieri.html" class="gm-btn gm-btn--primary">Înscrie-ți copilul</a>
             </div>
-            
-            <div class="nav-center">
-                <ul class="nav-links">
-                    <li><a href="despre.html">Despre</a></li>
-                    <li><a href="programe.html">Programe</a></li>
-                    <li><a href="activitati.html">Activități</a></li>
-                    <li><a href="galerie.html">Galerie</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="nav-right">
-                <a href="inscrieri.html" class="btn-primary" aria-current="page">Înscrie-ți copilul</a>
-            </div>
-            
-            <button class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <button class="gm-nav__toggle" aria-label="Meniu" aria-expanded="false" aria-controls="gm-mobile-menu">
+                <span class="gm-nav__toggle-line"></span>
+                <span class="gm-nav__toggle-line"></span>
+                <span class="gm-nav__toggle-line"></span>
             </button>
         </div>
-        
-        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
-            <a href="despre.html">Despre</a>
-            <a href="programe.html">Programe</a>
-            <a href="activitati.html">Activități</a>
-            <a href="galerie.html">Galerie</a>
-            <a href="contact.html">Contact</a>
-            <a href="inscrieri.html">Înscrieri</a>
+
+        <div id="gm-mobile-menu" class="gm-mobile-menu" aria-hidden="true">
+            <a href="despre.html" class="gm-mobile-menu__link">Despre</a>
+            <a href="programe.html" class="gm-mobile-menu__link">Programe</a>
+            <a href="activitati.html" class="gm-mobile-menu__link">Activități</a>
+            <a href="proiecte-erasmus.html" class="gm-mobile-menu__link">Proiecte Erasmus+</a>
+            <a href="galerie.html" class="gm-mobile-menu__link">Galerie</a>
+            <a href="contact.html" class="gm-mobile-menu__link">Contact</a>
+            <a href="inscrieri.html" class="gm-mobile-menu__link">Înscrieri</a>
         </div>
     </nav>
-    
-    <header class="page-header">
-        <div class="container">
-            <h1>Înscrie-ți copilul</h1>
-            <p>Fă primul pas către o experiență educațională minunată</p>
+
+    <header class="gm-page-header">
+        <div class="gm-container">
+            <h1 class="gm-page-header__title">Înscrieri</h1>
+            <p class="gm-page-header__subtitle">Hai în familia Grădiniței Model!</p>
         </div>
     </header>
-    
-    <main id="main">
-        <section class="enrollment-process-section">
-            <div class="container">
-                <h2 class="section-title">Procesul de înscriere</h2>
-                <p class="section-subtitle">Simplu și transparent, în câțiva pași</p>
-                
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Completează formularul</h3>
-                            <p>Trimite-ne informațiile de bază despre tine și copilul tău prin formularul de mai jos.</p>
+
+    <main id="gm-main">
+        <section class="gm-section">
+            <div class="gm-container">
+                <h2 class="gm-section__title">Procesul de înscriere</h2>
+                <p class="gm-section__subtitle">Pași simpli pentru a deveni parte din comunitatea noastră</p>
+
+                <div class="gm-steps">
+                    <div class="gm-step">
+                        <div class="gm-step__number">1</div>
+                        <div class="gm-step__content">
+                            <h3 class="gm-step__title">Completează formularul</h3>
+                            <p class="gm-step__text">Trimite-ne informațiile de mai jos și te vom contacta în cel mai scurt timp.</p>
                         </div>
                     </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Te contactăm</h3>
-                            <p>Echipa noastră te va contacta în maximum 24 de ore pentru a stabili detaliile.</p>
+
+                    <div class="gm-step">
+                        <div class="gm-step__number">2</div>
+                        <div class="gm-step__content">
+                            <h3 class="gm-step__title">Programează o vizită</h3>
+                            <p class="gm-step__text">Vino să cunoști echipa, facilitățile și atmosfera grădiniței.</p>
                         </div>
                     </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Programează vizita</h3>
-                            <p>Vino să cunoști echipa, să vezi spațiile și să pui toate întrebările.</p>
+
+                    <div class="gm-step">
+                        <div class="gm-step__number">3</div>
+                        <div class="gm-step__content">
+                            <h3 class="gm-step__title">Depune documentația</h3>
+                            <p class="gm-step__text">Certificat de naștere (copie), acte identitate părinți, fișă medicală.</p>
                         </div>
                     </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h3>Finalizare înscriere</h3>
-                            <p>Completezi documentele necesare și copilul tău poate începe aventura!</p>
+
+                    <div class="gm-step">
+                        <div class="gm-step__number">4</div>
+                        <div class="gm-step__content">
+                            <h3 class="gm-step__title">Bun venit!</h3>
+                            <p class="gm-step__text">Copilul tău începe o aventură minunată alături de noi.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="enrollment-form-section">
-            <div class="container">
-                <h2 class="section-title">Formular de înscriere</h2>
-                <p class="section-subtitle">Completează câmpurile de mai jos și te vom contacta</p>
-                
-                <div class="form-container">
-                    <div id="form-feedback" class="form-feedback"></div>
-                    
-                    <form id="enrollment-form" novalidate>
-                        <div class="form-group">
-                            <label for="parent-name">Nume complet părinte *</label>
-                            <input type="text" id="parent-name" name="parent-name" required aria-required="true" placeholder="Ex: Maria Popescu">
+        <section class="gm-section gm-section--alt">
+            <div class="gm-container">
+                <div class="gm-form-wrapper">
+                    <h2 class="gm-form__title">Formular de preînscriere</h2>
+                    <p class="gm-form__subtitle">Completează datele de mai jos și te vom contacta pentru programarea unei vizite.</p>
+
+                    <form id="gm-enrollment-form" class="gm-form" novalidate>
+                        <div class="gm-form__group">
+                            <label for="gm-parent-name" class="gm-form__label">Nume părinte *</label>
+                            <input type="text" id="gm-parent-name" name="parentName" class="gm-form__input" required>
+                            <span class="gm-form__error" id="gm-parent-name-error"></span>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required aria-required="true" placeholder="maria.popescu@email.com">
+
+                        <div class="gm-form__group">
+                            <label for="gm-email" class="gm-form__label">Email *</label>
+                            <input type="email" id="gm-email" name="email" class="gm-form__input" required>
+                            <span class="gm-form__error" id="gm-email-error"></span>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Telefon *</label>
-                            <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="07XX XXX XXX">
+
+                        <div class="gm-form__group">
+                            <label for="gm-phone" class="gm-form__label">Telefon *</label>
+                            <input type="tel" id="gm-phone" name="phone" class="gm-form__input" required>
+                            <span class="gm-form__error" id="gm-phone-error"></span>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="child-age">Vârsta copilului *</label>
-                            <select id="child-age" name="child-age" required aria-required="true">
+
+                        <div class="gm-form__group">
+                            <label for="gm-child-name" class="gm-form__label">Nume copil *</label>
+                            <input type="text" id="gm-child-name" name="childName" class="gm-form__input" required>
+                            <span class="gm-form__error" id="gm-child-name-error"></span>
+                        </div>
+
+                        <div class="gm-form__group">
+                            <label for="gm-child-age" class="gm-form__label">Vârsta copilului *</label>
+                            <select id="gm-child-age" name="childAge" class="gm-form__input" required>
                                 <option value="">Selectează vârsta</option>
-                                <option value="2">2 ani (Grupa Mini)</option>
-                                <option value="3">3 ani (Grupa Mijlocie)</option>
-                                <option value="4">4 ani (Grupa Mijlocie)</option>
-                                <option value="5">5 ani (Grupa Mare)</option>
-                                <option value="6">6 ani (Grupa Mare)</option>
+                                <option value="2">2 ani</option>
+                                <option value="3">3 ani</option>
+                                <option value="4">4 ani</option>
+                                <option value="5">5 ani</option>
+                                <option value="6">6 ani</option>
                             </select>
+                            <span class="gm-form__error" id="gm-child-age-error"></span>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mesaj (opțional)</label>
-                            <textarea id="message" name="message" placeholder="Spune-ne mai multe despre nevoile copilului tău sau întreabă-ne orice..."></textarea>
+
+                        <div class="gm-form__group">
+                            <label for="gm-message" class="gm-form__label">Mesaj (opțional)</label>
+                            <textarea id="gm-message" name="message" class="gm-form__textarea" rows="4"></textarea>
                         </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="gdpr" name="gdpr" required aria-required="true">
-                            <label for="gdpr">
+
+                        <div class="gm-form__group gm-form__group--checkbox">
+                            <input type="checkbox" id="gm-consent" name="consent" class="gm-form__checkbox" required>
+                            <label for="gm-consent" class="gm-form__checkbox-label">
                                 Sunt de acord cu prelucrarea datelor personale conform 
-                                <a href="politica-confidentialitate.html">Politicii de confidențialitate</a> *
+                                <a href="politica-confidentialitate.html" class="gm-form__link">politicii de confidențialitate</a> *
                             </label>
+                            <span class="gm-form__error" id="gm-consent-error"></span>
                         </div>
-                        
-                        <div class="form-note">
-                            <strong>📋 Protecția datelor:</strong> Datele tale personale vor fi folosite exclusiv pentru 
-                            procesul de înscriere și comunicare cu Grădinița Model. Nu le vom partaja cu terțe părți 
-                            fără acordul tău expres.
+
+                        <div class="gm-form__note">
+                            <p>Datele tale personale sunt protejate și vor fi folosite exclusiv pentru a te contacta în legătură cu înscrierea.</p>
                         </div>
-                        
-                        <button type="submit" class="btn-primary">
-                            Trimite cererea de înscriere
-                        </button>
+
+                        <div class="gm-form__feedback" id="gm-form-feedback"></div>
+
+                        <button type="submit" class="gm-btn gm-btn--primary gm-btn--full">Trimite cererea</button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section class="documents-section">
-            <div class="container">
-                <h2 class="section-title">Documente necesare la înscriere</h2>
-                <p class="section-subtitle">Pentru finalizarea înscrierii, vei avea nevoie de următoarele documente</p>
-                
-                <div class="documents-grid">
-                    <div class="document-item">
-                        <div class="document-icon">📄</div>
-                        <h3>Certificat de naștere</h3>
-                        <p>Copie după certificatul de naștere al copilului (original pentru verificare)</p>
-                    </div>
-                    
-                    <div class="document-item">
-                        <div class="document-icon">📋</div>
-                        <h3>Carnet de sănătate</h3>
-                        <p>Carnetul de sănătate al copilului cu toate vaccinările la zi</p>
-                    </div>
-                    
-                    <div class="document-item">
-                        <div class="document-icon">⚕️</div>
-                        <h3>Adeverință medicală</h3>
-                        <p>Adeverință de la medicul de familie pentru frecventarea colectivității</p>
-                    </div>
-                    
-                    <div class="document-item">
-                        <div class="document-icon">🆔</div>
-                        <h3>Act de identitate părinte</h3>
-                        <p>Copie după CI/BI al părintelui/tutorelui legal</p>
-                    </div>
-                    
-                    <div class="document-item">
-                        <div class="document-icon">📝</div>
-                        <h3>Formular de înscriere</h3>
-                        <p>Formular completat și semnat (îl primești de la grădiniță)</p>
-                    </div>
-                    
-                    <div class="document-item">
-                        <div class="document-icon">📸</div>
-                        <h3>Fotografii</h3>
-                        <p>2 fotografii recente tip buletin ale copilului</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Încă te gândești?</h2>
-                    <p>Nu ezita să ne contactezi pentru orice întrebare. Suntem aici să te ajutăm!</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn-primary">Contactează-ne</a>
-                        <a href="galerie.html" class="btn-secondary">Vezi galeria</a>
+        <section class="gm-section gm-section--cta">
+            <div class="gm-container">
+                <div class="gm-cta__content">
+                    <h2 class="gm-cta__title">Ai întrebări?</h2>
+                    <p class="gm-cta__text">Suntem aici să te ajutăm cu orice informație despre procesul de înscriere.</p>
+                    <div class="gm-cta__buttons">
+                        <a href="contact.html" class="gm-btn gm-btn--primary">Contactează-ne</a>
+                        <a href="tel:+40745123456" class="gm-btn gm-btn--secondary">Sună acum</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Grădinița Model</h3>
-                    <p>Educație timpurie de calitate în Târgoviște. Creștem curiozitatea și încrederea copiilor.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
-                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                        <a href="#" class="social-link" aria-label="YouTube">📹</a>
+
+    <footer class="gm-footer">
+        <div class="gm-container">
+            <div class="gm-footer__content">
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Grădinița Model</h3>
+                    <p class="gm-footer__text">Educație timpurie de calitate în Târgoviște. Creștem curiozitatea și încrederea copiilor.</p>
+                    <div class="gm-footer__social">
+                        <a href="#" class="gm-footer__social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="gm-footer__social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="gm-footer__social-link" aria-label="YouTube">📹</a>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Linkuri rapide</h3>
-                    <ul>
-                        <li><a href="despre.html">Despre noi</a></li>
-                        <li><a href="programe.html">Programe</a></li>
-                        <li><a href="activitati.html">Activități</a></li>
-                        <li><a href="galerie.html">Galerie</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="inscrieri.html">Înscrieri</a></li>
+
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Linkuri rapide</h3>
+                    <ul class="gm-footer__list">
+                        <li><a href="despre.html" class="gm-footer__link">Despre noi</a></li>
+                        <li><a href="programe.html" class="gm-footer__link">Programe</a></li>
+                        <li><a href="activitati.html" class="gm-footer__link">Activități</a></li>
+                        <li><a href="proiecte-erasmus.html" class="gm-footer__link">Proiecte Erasmus+</a></li>
+                        <li><a href="galerie.html" class="gm-footer__link">Galerie</a></li>
+                        <li><a href="contact.html" class="gm-footer__link">Contact</a></li>
+                        <li><a href="inscrieri.html" class="gm-footer__link">Înscrieri</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <ul>
+
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Contact</h3>
+                    <ul class="gm-footer__list">
                         <li>📍 Str. Mihai Viteazul nr. 45</li>
                         <li>Târgoviște, Dâmbovița</li>
-                        <li>📞 <a href="tel:+40745123456">+40 745 123 456</a></li>
-                        <li>✉️ <a href="mailto:contact@gradinita-model.ro">contact@gradinita-model.ro</a></li>
+                        <li>📞 <a href="tel:+40745123456" class="gm-footer__link">+40 745 123 456</a></li>
+                        <li>✉️ <a href="mailto:contact@gradinita-model.ro" class="gm-footer__link">contact@gradinita-model.ro</a></li>
                         <li>🕐 L-V: 07:30 - 17:30</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
+
+            <div class="gm-footer__bottom">
                 <p>&copy; 2025 Grădinița Model, Târgoviște. Toate drepturile rezervate.</p>
-                <p><a href="politica-confidentialitate.html">Politica de confidențialitate</a></p>
+                <p><a href="politica-confidentialitate.html" class="gm-footer__link">Politica de confidențialitate</a></p>
             </div>
         </div>
     </footer>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>

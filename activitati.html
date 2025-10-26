@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activități - Grădinița Model Târgoviște</title>
-    <meta name="description" content="Activități variate la Grădinița Model: engleză, dans, arte plastice, STEM, jocuri senzoriale și multe altele pentru copii 2-6 ani.">
+    <meta name="description" content="Activități diverse pentru copii la Grădinița Model: engleză, dans, arte plastice, STEM, muzică și multe altele. Dezvoltare completă prin joc.">
     <link rel="canonical" href="https://www.gradinita-model.ro/activitati.html">
+    <meta property="og:title" content="Activități - Grădinița Model Târgoviște">
+    <meta property="og:description" content="Activități variate pentru dezvoltarea completă a copiilor: engleză, dans, arte, STEM și multe altele.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gradinita-model.ro/activitati.html">
+    <meta property="og:image" content="https://www.gradinita-model.ro/images/og-image.jpg">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏫%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,174 +18,191 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Sari la conținut</a>
-    
-    <nav class="navbar" role="navigation" aria-label="Navigare principală">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
-                    <div class="logo-icon">🏫</div>
-                    <span>Grădinița Model</span>
-                </a>
+    <a href="#gm-main" class="gm-skip-link">Sari la conținut</a>
+
+    <nav class="gm-nav" role="navigation" aria-label="Navigare principală">
+        <div class="gm-nav__container">
+            <a href="index.html" class="gm-nav__logo" aria-label="Grădinița Model - Acasă">
+                <div class="gm-nav__logo-icon">🏫</div>
+                <span class="gm-nav__logo-text">Grădinița Model</span>
+            </a>
+
+            <ul class="gm-nav__links">
+                <li><a href="despre.html" class="gm-nav__link">Despre</a></li>
+                <li><a href="programe.html" class="gm-nav__link">Programe</a></li>
+                <li><a href="activitati.html" class="gm-nav__link">Activități</a></li>
+                <li><a href="proiecte-erasmus.html" class="gm-nav__link">Proiecte Erasmus+</a></li>
+                <li><a href="galerie.html" class="gm-nav__link">Galerie</a></li>
+                <li><a href="contact.html" class="gm-nav__link">Contact</a></li>
+            </ul>
+
+            <div class="gm-nav__cta">
+                <a href="inscrieri.html" class="gm-btn gm-btn--primary">Înscrie-ți copilul</a>
             </div>
-            
-            <div class="nav-center">
-                <ul class="nav-links">
-                    <li><a href="despre.html">Despre</a></li>
-                    <li><a href="programe.html">Programe</a></li>
-                    <li><a href="activitati.html" aria-current="page">Activități</a></li>
-                    <li><a href="galerie.html">Galerie</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="nav-right">
-                <a href="inscrieri.html" class="btn-primary">Înscrie-ți copilul</a>
-            </div>
-            
-            <button class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <button class="gm-nav__toggle" aria-label="Meniu" aria-expanded="false" aria-controls="gm-mobile-menu">
+                <span class="gm-nav__toggle-line"></span>
+                <span class="gm-nav__toggle-line"></span>
+                <span class="gm-nav__toggle-line"></span>
             </button>
         </div>
-        
-        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
-            <a href="despre.html">Despre</a>
-            <a href="programe.html">Programe</a>
-            <a href="activitati.html">Activități</a>
-            <a href="galerie.html">Galerie</a>
-            <a href="contact.html">Contact</a>
-            <a href="inscrieri.html">Înscrieri</a>
+
+        <div id="gm-mobile-menu" class="gm-mobile-menu" aria-hidden="true">
+            <a href="despre.html" class="gm-mobile-menu__link">Despre</a>
+            <a href="programe.html" class="gm-mobile-menu__link">Programe</a>
+            <a href="activitati.html" class="gm-mobile-menu__link">Activități</a>
+            <a href="proiecte-erasmus.html" class="gm-mobile-menu__link">Proiecte Erasmus+</a>
+            <a href="galerie.html" class="gm-mobile-menu__link">Galerie</a>
+            <a href="contact.html" class="gm-mobile-menu__link">Contact</a>
+            <a href="inscrieri.html" class="gm-mobile-menu__link">Înscrieri</a>
         </div>
     </nav>
-    
-    <header class="page-header">
-        <div class="container">
-            <h1>Activitățile noastre</h1>
-            <p>Experiențe variate pentru o dezvoltare completă</p>
+
+    <header class="gm-page-header">
+        <div class="gm-container">
+            <h1 class="gm-page-header__title">Activități variate</h1>
+            <p class="gm-page-header__subtitle">Experiențe diverse pentru o dezvoltare armonioasă</p>
         </div>
     </header>
-    
-    <main id="main">
-        <section class="activities-section">
-            <div class="container">
-                <div class="activities-grid">
-                    <article class="activity-card">
-                        <div class="activity-icon">🇬🇧</div>
-                        <h3>Limba engleză</h3>
-                        <p>Învățare naturală prin jocuri, cântece și povești interactive cu profesor nativ.</p>
-                    </article>
-                    
-                    <article class="activity-card">
-                        <div class="activity-icon">💃</div>
-                        <h3>Dans și mișcare</h3>
-                        <p>Coordonare, echilibru și expresie corporală prin muzică și coregrafii adaptate.</p>
-                    </article>
-                    
-                    <article class="activity-card">
-                        <div class="activity-icon">🎨</div>
-                        <h3>Arte plastice</h3>
-                        <p>Pictură, desen, modelaj și activități creative diverse pentru stimularea imaginației.</p>
-                    </article>
-                    
-                    <article class="activity-card">
-                        <div class="activity-icon">✋</div>
-                        <h3>Jocuri senzoriale</h3>
-                        <p>Explorare tactilă cu materiale naturale și activități Montessori pentru dezvoltare senzorială.</p>
-                    </article>
-                    
-                    <article class="activity-card">
-                        <div class="activity-icon">🔬</div>
-                        <h3>STEM pentru copii</h3>
-                        <p>Experimente simple, construcții și activități științifice adaptate preșcolarilor.</p>
-                    </article>
-                    
-                    <article class="activity-card">
-                        <div class="activity-icon">📚</div>
-                        <h3>Povești interactive</h3>
-                        <p>Lectură animată, teatru de păpuși și activități literare pentru dezvoltarea limbajului.</p>
-                    </article>
-                    
-                    <article class="activity-card">
-                        <div class="activity-icon">🎵</div>
-                        <h3>Educație muzicală</h3>
-                        <p>Cântece, instrumente muzicale simple și explorare sonoră pentru dezvoltare auditivă.</p>
-                    </article>
-                    
-                    <article class="activity-card">
-                        <div class="activity-icon">🌳</div>
-                        <h3>Activități în aer liber</h3>
-                        <p>Jocuri în curte, explorarea naturii și activități de mișcare pentru dezvoltare fizică.</p>
-                    </article>
-                    
-                    <article class="activity-card">
-                        <div class="activity-icon">🧩</div>
-                        <h3>Jocuri logice</h3>
-                        <p>Puzzle-uri, jocuri de sortare și activități pentru dezvoltarea gândirii logice.</p>
-                    </article>
+
+    <main id="gm-main">
+        <section class="gm-section">
+            <div class="gm-container">
+                <div class="gm-activities__grid">
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">🇬🇧</div>
+                        <h2 class="gm-card__title">Limba engleză</h2>
+                        <p class="gm-card__text">Învățare prin jocuri, cântece și povești interactive.</p>
+                    </div>
+
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">💃</div>
+                        <h2 class="gm-card__title">Dans și mișcare</h2>
+                        <p class="gm-card__text">Dezvoltarea coordonării și expresiei corporale.</p>
+                    </div>
+
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">🎨</div>
+                        <h2 class="gm-card__title">Arte plastice</h2>
+                        <p class="gm-card__text">Pictură, desen, modelaj și tehnici creative diverse.</p>
+                    </div>
+
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">🔬</div>
+                        <h2 class="gm-card__title">STEM pentru copii</h2>
+                        <p class="gm-card__text">Experimente simple, construcții și explorare științifică.</p>
+                    </div>
+
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">🎵</div>
+                        <h2 class="gm-card__title">Educație muzicală</h2>
+                        <p class="gm-card__text">Cântece, ritmuri și instrumente muzicale simple.</p>
+                    </div>
+
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">📚</div>
+                        <h2 class="gm-card__title">Povești și teatru</h2>
+                        <p class="gm-card__text">Lecturi interactive și dramatizări creative.</p>
+                    </div>
+
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">🏃</div>
+                        <h2 class="gm-card__title">Educație fizică</h2>
+                        <p class="gm-card__text">Jocuri de mișcare și activități sportive adaptate.</p>
+                    </div>
+
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">🌱</div>
+                        <h2 class="gm-card__title">Grădinărit și natură</h2>
+                        <p class="gm-card__text">Explorarea naturii și îngrijirea plantelor.</p>
+                    </div>
+
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">🧩</div>
+                        <h2 class="gm-card__title">Jocuri logice</h2>
+                        <p class="gm-card__text">Puzzle-uri, șah pentru copii, jocuri strategice.</p>
+                    </div>
+
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">🍳</div>
+                        <h2 class="gm-card__title">Activități culinare</h2>
+                        <p class="gm-card__text">Prepararea de rețete simple și sănătoase.</p>
+                    </div>
+
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">🎭</div>
+                        <h2 class="gm-card__title">Expresie creativă</h2>
+                        <p class="gm-card__text">Joc de rol, improvizație și creativitate liberă.</p>
+                    </div>
+
+                    <div class="gm-card gm-card--activity">
+                        <div class="gm-card__icon">🌍</div>
+                        <h2 class="gm-card__title">Descoperim lumea</h2>
+                        <p class="gm-card__text">Explorarea culturilor, geografiei și tradițiilor.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Vrei să vezi activitățile în acțiune?</h2>
-                    <p>Programează o vizită și descoperă cum copiii învață prin joacă la Grădinița Model.</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn-primary">Programează o vizită</a>
-                        <a href="galerie.html" class="btn-secondary">Vezi galeria foto</a>
+        <section class="gm-section gm-section--cta">
+            <div class="gm-container">
+                <div class="gm-cta__content">
+                    <h2 class="gm-cta__title">Copilul tău va adora fiecare zi!</h2>
+                    <p class="gm-cta__text">Programează o vizită pentru a vedea activitățile noastre în acțiune.</p>
+                    <div class="gm-cta__buttons">
+                        <a href="contact.html" class="gm-btn gm-btn--primary">Contactează-ne</a>
+                        <a href="inscrieri.html" class="gm-btn gm-btn--secondary">Înscrie-ți copilul</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Grădinița Model</h3>
-                    <p>Educație timpurie de calitate în Târgoviște. Creștem curiozitatea și încrederea copiilor.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
-                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                        <a href="#" class="social-link" aria-label="YouTube">📹</a>
+
+    <footer class="gm-footer">
+        <div class="gm-container">
+            <div class="gm-footer__content">
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Grădinița Model</h3>
+                    <p class="gm-footer__text">Educație timpurie de calitate în Târgoviște. Creștem curiozitatea și încrederea copiilor.</p>
+                    <div class="gm-footer__social">
+                        <a href="#" class="gm-footer__social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="gm-footer__social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="gm-footer__social-link" aria-label="YouTube">📹</a>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Linkuri rapide</h3>
-                    <ul>
-                        <li><a href="despre.html">Despre noi</a></li>
-                        <li><a href="programe.html">Programe</a></li>
-                        <li><a href="activitati.html">Activități</a></li>
-                        <li><a href="galerie.html">Galerie</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="inscrieri.html">Înscrieri</a></li>
+
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Linkuri rapide</h3>
+                    <ul class="gm-footer__list">
+                        <li><a href="despre.html" class="gm-footer__link">Despre noi</a></li>
+                        <li><a href="programe.html" class="gm-footer__link">Programe</a></li>
+                        <li><a href="activitati.html" class="gm-footer__link">Activități</a></li>
+                        <li><a href="proiecte-erasmus.html" class="gm-footer__link">Proiecte Erasmus+</a></li>
+                        <li><a href="galerie.html" class="gm-footer__link">Galerie</a></li>
+                        <li><a href="contact.html" class="gm-footer__link">Contact</a></li>
+                        <li><a href="inscrieri.html" class="gm-footer__link">Înscrieri</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <ul>
+
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Contact</h3>
+                    <ul class="gm-footer__list">
                         <li>📍 Str. Mihai Viteazul nr. 45</li>
                         <li>Târgoviște, Dâmbovița</li>
-                        <li>📞 <a href="tel:+40745123456">+40 745 123 456</a></li>
-                        <li>✉️ <a href="mailto:contact@gradinita-model.ro">contact@gradinita-model.ro</a></li>
+                        <li>📞 <a href="tel:+40745123456" class="gm-footer__link">+40 745 123 456</a></li>
+                        <li>✉️ <a href="mailto:contact@gradinita-model.ro" class="gm-footer__link">contact@gradinita-model.ro</a></li>
                         <li>🕐 L-V: 07:30 - 17:30</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
+
+            <div class="gm-footer__bottom">
                 <p>&copy; 2025 Grădinița Model, Târgoviște. Toate drepturile rezervate.</p>
-                <p><a href="politica-confidentialitate.html">Politica de confidențialitate</a></p>
+                <p><a href="politica-confidentialitate.html" class="gm-footer__link">Politica de confidențialitate</a></p>
             </div>
         </div>
     </footer>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>

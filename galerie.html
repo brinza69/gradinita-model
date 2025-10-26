@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie Foto - Grădinița Model Târgoviște</title>
-    <meta name="description" content="Galerie foto cu momente din viața de zi cu zi la Grădinița Model Târgoviște.">
+    <meta name="description" content="Galeria foto a Grădiniței Model din Târgoviște. Descoperă momentele frumoase din viața de zi cu zi a copiilor noștri.">
     <link rel="canonical" href="https://www.gradinita-model.ro/galerie.html">
+    <meta property="og:title" content="Galerie Foto - Grădinița Model Târgoviște">
+    <meta property="og:description" content="Imagini din activitățile zilnice și momentele speciale de la Grădinița Model.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gradinita-model.ro/galerie.html">
+    <meta property="og:image" content="https://www.gradinita-model.ro/images/og-image.jpg">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏫%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,247 +18,152 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Sari la conținut</a>
-    
-    <nav class="navbar" role="navigation" aria-label="Navigare principală">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
-                    <div class="logo-icon">🏫</div>
-                    <span>Grădinița Model</span>
-                </a>
+    <a href="#gm-main" class="gm-skip-link">Sari la conținut</a>
+
+    <nav class="gm-nav" role="navigation" aria-label="Navigare principală">
+        <div class="gm-nav__container">
+            <a href="index.html" class="gm-nav__logo" aria-label="Grădinița Model - Acasă">
+                <div class="gm-nav__logo-icon">🏫</div>
+                <span class="gm-nav__logo-text">Grădinița Model</span>
+            </a>
+
+            <ul class="gm-nav__links">
+                <li><a href="despre.html" class="gm-nav__link">Despre</a></li>
+                <li><a href="programe.html" class="gm-nav__link">Programe</a></li>
+                <li><a href="activitati.html" class="gm-nav__link">Activități</a></li>
+                <li><a href="proiecte-erasmus.html" class="gm-nav__link">Proiecte Erasmus+</a></li>
+                <li><a href="galerie.html" class="gm-nav__link">Galerie</a></li>
+                <li><a href="contact.html" class="gm-nav__link">Contact</a></li>
+            </ul>
+
+            <div class="gm-nav__cta">
+                <a href="inscrieri.html" class="gm-btn gm-btn--primary">Înscrie-ți copilul</a>
             </div>
-            
-            <div class="nav-center">
-                <ul class="nav-links">
-                    <li><a href="despre.html">Despre</a></li>
-                    <li><a href="programe.html">Programe</a></li>
-                    <li><a href="activitati.html">Activități</a></li>
-                    <li><a href="galerie.html" aria-current="page">Galerie</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="nav-right">
-                <a href="inscrieri.html" class="btn-primary">Înscrie-ți copilul</a>
-            </div>
-            
-            <button class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <button class="gm-nav__toggle" aria-label="Meniu" aria-expanded="false" aria-controls="gm-mobile-menu">
+                <span class="gm-nav__toggle-line"></span>
+                <span class="gm-nav__toggle-line"></span>
+                <span class="gm-nav__toggle-line"></span>
             </button>
         </div>
-        
-        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
-            <a href="despre.html">Despre</a>
-            <a href="programe.html">Programe</a>
-            <a href="activitati.html">Activități</a>
-            <a href="galerie.html">Galerie</a>
-            <a href="contact.html">Contact</a>
-            <a href="inscrieri.html">Înscrieri</a>
+
+        <div id="gm-mobile-menu" class="gm-mobile-menu" aria-hidden="true">
+            <a href="despre.html" class="gm-mobile-menu__link">Despre</a>
+            <a href="programe.html" class="gm-mobile-menu__link">Programe</a>
+            <a href="activitati.html" class="gm-mobile-menu__link">Activități</a>
+            <a href="proiecte-erasmus.html" class="gm-mobile-menu__link">Proiecte Erasmus+</a>
+            <a href="galerie.html" class="gm-mobile-menu__link">Galerie</a>
+            <a href="contact.html" class="gm-mobile-menu__link">Contact</a>
+            <a href="inscrieri.html" class="gm-mobile-menu__link">Înscrieri</a>
         </div>
     </nav>
-    
-    <header class="page-header">
-        <div class="container">
-            <h1>Galeria noastră</h1>
-            <p>Imagini din viața de zi cu zi la grădiniță</p>
+
+    <header class="gm-page-header">
+        <div class="gm-container">
+            <h1 class="gm-page-header__title">Galerie foto</h1>
+            <p class="gm-page-header__subtitle">Momente frumoase din viața de zi cu zi la grădiniță</p>
         </div>
     </header>
-    
-    <main id="main">
-        <section class="gallery-section">
-            <div class="container">
-                <div class="gallery-grid" id="gallery-grid">
-                    <div class="gallery-item" data-image="images/galerie/gradinita-fron.webp" tabindex="0" role="button" aria-label="Vezi imaginea: Curtea de joacă">
-                        🌳
-                    </div>
-                    <div class="gallery-item" data-image="images/galerie/sala-activitati-targoviste.webp" tabindex="0" role="button" aria-label="Vezi imaginea: Sala de activități">
-                        🏫
-                    </div>
-                    <div class="gallery-item" data-image="images/galerie/copii-creatie-targoviste.webp" tabindex="0" role="button" aria-label="Vezi imaginea: Activități creative">
-                        🎨
-                    </div>
-                    <div class="gallery-item" data-image="images/galerie/activitati-grup-targoviste.webp" tabindex="0" role="button" aria-label="Vezi imaginea: Activități de grup">
-                        👥
-                    </div>
-                    <div class="gallery-item" data-image="images/galerie/exterior-gradinita-targoviste.webp" tabindex="0" role="button" aria-label="Vezi imaginea: Exterior grădiniță">
-                        🏡
-                    </div>
-                    <div class="gallery-item" data-image="images/galerie/mese-copii-targoviste.webp" tabindex="0" role="button" aria-label="Vezi imaginea: Sala de mese">
-                        🍽️
-                    </div>
-                    <div class="gallery-item" data-image="images/galerie/gradinita-fron.webp" tabindex="0" role="button" aria-label="Vezi imaginea: Curtea de joacă">
-                        🌳
-                    </div>
-                    
-                    <!-- Gallery Item 2 -->
-                    <div class="gallery-item" tabindex="0" role="button" aria-label="Vezi imaginea: Sala de activități">
-                        <img 
-                            src="images/galerie/sala-activitati-targoviste.webp" 
-                            data-full="images/galerie/sala-activitati-targoviste.webp"
-                            alt="Sala de activități educaționale Grădinița Model" 
-                            loading="lazy"
-                            decoding="async"
-                            width="400"
-                            height="300">
-                    </div>
-                    
-                    <!-- Gallery Item 3 -->
-                    <div class="gallery-item" tabindex="0" role="button" aria-label="Vezi imaginea: Activități creative">
-                        <img 
-                            src="images/galerie/copii-creatie-targoviste.webp" 
-                            data-full="images/galerie/copii-creatie-targoviste.webp"
-                            alt="Copii la activități creative de pictură și desen" 
-                            loading="lazy"
-                            decoding="async"
-                            width="400"
-                            height="300">
-                    </div>
-                    
-                    <!-- Gallery Item 4 -->
-                    <div class="gallery-item" tabindex="0" role="button" aria-label="Vezi imaginea: Activități de grup">
-                        <img 
-                            src="images/galerie/activitati-grup-targoviste.webp" 
-                            data-full="images/galerie/activitati-grup-targoviste.webp"
-                            alt="Activități educaționale de grup la Grădinița Model" 
-                            loading="lazy"
-                            decoding="async"
-                            width="400"
-                            height="300">
-                    </div>
-                    
-                    <!-- Gallery Item 5 -->
-                    <div class="gallery-item" tabindex="0" role="button" aria-label="Vezi imaginea: Exterior grădiniță">
-                        <img 
-                            src="images/galerie/exterior-gradinita-targoviste.webp" 
-                            data-full="images/galerie/exterior-gradinita-targoviste.webp"
-                            alt="Exteriorul Grădiniței Model Târgoviște" 
-                            loading="lazy"
-                            decoding="async"
-                            width="400"
-                            height="300">
-                    </div>
-                    
-                    <!-- Gallery Item 6 -->
-                    <div class="gallery-item" tabindex="0" role="button" aria-label="Vezi imaginea: Sala de mese">
-                        <img 
-                            src="images/galerie/mese-copii-targoviste.webp" 
-                            data-full="images/galerie/mese-copii-targoviste.webp"
-                            alt="Sala de mese pentru copii cu meniu sănătos" 
-                            loading="lazy"
-                            decoding="async"
-                            width="400"
-                            height="300">
-                    </div>
-                    
-                    <!-- Gallery Item 7 -->
-                    <div class="gallery-item" tabindex="0" role="button" aria-label="Vezi imaginea: Jocuri educative">
-                        <img 
-                            src="images/galerie/jocuri-educative-targoviste.webp" 
-                            data-full="images/galerie/jocuri-educative-targoviste.webp"
-                            alt="Copii la jocuri educative și activități STEM" 
-                            loading="lazy"
-                            decoding="async"
-                            width="400"
-                            height="300">
-                    </div>
-                    
-                    <!-- Gallery Item 8 -->
-                    <div class="gallery-item" tabindex="0" role="button" aria-label="Vezi imaginea: Muzică și dans">
-                        <img 
-                            src="images/galerie/muzica-dans-targoviste.webp" 
-                            data-full="images/galerie/muzica-dans-targoviste.webp"
-                            alt="Activități de muzică și dans pentru copii" 
-                            loading="lazy"
-                            decoding="async"
-                            width="400"
-                            height="300">
-                    </div>
-                    
-                    <!-- Gallery Item 9 -->
-                    <div class="gallery-item" tabindex="0" role="button" aria-label="Vezi imaginea: Bibliotecă">
-                        <img 
-                            src="images/galerie/biblioteca-povesti-targoviste.webp" 
-                            data-full="images/galerie/biblioteca-povesti-targoviste.webp"
-                            alt="Colțul de lectură și povești pentru copii" 
-                            loading="lazy"
-                            decoding="async"
-                            width="400"
-                            height="300">
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--light); border-radius: 16px;">
-                    <p style="font-size: 1.125rem; margin-bottom: 1rem;">
-                        💡 <strong>Notă:</strong> Toate fotografiile sunt făcute cu consimțământul părinților și 
-                        respectă politica de confidențialitate a grădiniței.
-                    </p>
-                </div>
-                <button id="show-more-btn" class="btn-secondary show-more-btn" aria-controls="gallery-grid">Arată mai mult</button>
-            </div>
-        </section>
 
-        <!-- CTA Section -->
-        <section style="background: linear-gradient(135deg, rgba(115, 184, 240, 0.1), rgba(123, 211, 137, 0.1)); padding: 4rem 1.5rem; text-align: center;">
-            <div class="container">
-                <h2>Vrei să vezi mai mult?</h2>
-                <p style="font-size: 1.125rem; color: var(--gray); margin: 1rem 0 2rem;">
-                    Programează o vizită și descoperă personal atmosfera călduroasă din grădinița noastră.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html" class="btn-primary">Programează o vizită</a>
-                    <a href="inscrieri.html" class="btn-secondary">Înscrie-ți copilul</a>
+    <main id="gm-main">
+        <section class="gm-section">
+            <div class="gm-container">
+                <div class="gm-gallery__grid">
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/curte-jocuri-targoviste.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Curte de joacă">
+                        <div class="gm-gallery__placeholder">🎈</div>
+                    </div>
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/activitati-artistica.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Activități artistice">
+                        <div class="gm-gallery__placeholder">🎨</div>
+                    </div>
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/sala-de-clasa.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Sala de clasă">
+                        <div class="gm-gallery__placeholder">📚</div>
+                    </div>
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/masa-gustare.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Masa de gustare">
+                        <div class="gm-gallery__placeholder">🍎</div>
+                    </div>
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/activitate-grup.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Activitate în grup">
+                        <div class="gm-gallery__placeholder">👫</div>
+                    </div>
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/zona-joaca-exterior.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Zona de joacă exterioară">
+                        <div class="gm-gallery__placeholder">🌳</div>
+                    </div>
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/activitate-muzica.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Activitate muzicală">
+                        <div class="gm-gallery__placeholder">🎵</div>
+                    </div>
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/dans-miscare.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Dans și mișcare">
+                        <div class="gm-gallery__placeholder">💃</div>
+                    </div>
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/activitate-engleza.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Lecție de engleză">
+                        <div class="gm-gallery__placeholder">🇬🇧</div>
+                    </div>
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/experimente-stem.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Experimente STEM">
+                        <div class="gm-gallery__placeholder">🔬</div>
+                    </div>
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/gradinarie-natura.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Activități în natură">
+                        <div class="gm-gallery__placeholder">🌱</div>
+                    </div>
+                    <div class="gm-gallery__item" data-gm-full="images/galerie/activitate-creative.webp" tabindex="0" role="button" aria-label="Deschide imaginea: Activități creative">
+                        <div class="gm-gallery__placeholder">✨</div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Grădinița Model</h3>
-                    <p>Educație timpurie de calitate în Târgoviște. Creștem curiozitatea și încrederea copiilor.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
-                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                        <a href="#" class="social-link" aria-label="YouTube">📹</a>
+
+    <div class="gm-lightbox" id="gm-lightbox" role="dialog" aria-modal="true" aria-label="Vizualizare imagine" aria-hidden="true">
+        <button class="gm-lightbox__close" aria-label="Închide">×</button>
+        <button class="gm-lightbox__prev" aria-label="Imagine anterioară">‹</button>
+        <button class="gm-lightbox__next" aria-label="Imagine următoare">›</button>
+        <div class="gm-lightbox__content">
+            <img src="" alt="" class="gm-lightbox__image" id="gm-lightbox-image">
+        </div>
+    </div>
+
+    <footer class="gm-footer">
+        <div class="gm-container">
+            <div class="gm-footer__content">
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Grădinița Model</h3>
+                    <p class="gm-footer__text">Educație timpurie de calitate în Târgoviște. Creștem curiozitatea și încrederea copiilor.</p>
+                    <div class="gm-footer__social">
+                        <a href="#" class="gm-footer__social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="gm-footer__social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="gm-footer__social-link" aria-label="YouTube">📹</a>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Linkuri rapide</h3>
-                    <ul>
-                        <li><a href="despre.html">Despre noi</a></li>
-                        <li><a href="programe.html">Programe</a></li>
-                        <li><a href="activitati.html">Activități</a></li>
-                        <li><a href="galerie.html">Galerie</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="inscrieri.html">Înscrieri</a></li>
+
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Linkuri rapide</h3>
+                    <ul class="gm-footer__list">
+                        <li><a href="despre.html" class="gm-footer__link">Despre noi</a></li>
+                        <li><a href="programe.html" class="gm-footer__link">Programe</a></li>
+                        <li><a href="activitati.html" class="gm-footer__link">Activități</a></li>
+                        <li><a href="proiecte-erasmus.html" class="gm-footer__link">Proiecte Erasmus+</a></li>
+                        <li><a href="galerie.html" class="gm-footer__link">Galerie</a></li>
+                        <li><a href="contact.html" class="gm-footer__link">Contact</a></li>
+                        <li><a href="inscrieri.html" class="gm-footer__link">Înscrieri</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <ul>
+
+                <div class="gm-footer__section">
+                    <h3 class="gm-footer__title">Contact</h3>
+                    <ul class="gm-footer__list">
                         <li>📍 Str. Mihai Viteazul nr. 45</li>
                         <li>Târgoviște, Dâmbovița</li>
-                        <li>📞 <a href="tel:+40745123456">+40 745 123 456</a></li>
-                        <li>✉️ <a href="mailto:contact@gradinita-model.ro">contact@gradinita-model.ro</a></li>
+                        <li>📞 <a href="tel:+40745123456" class="gm-footer__link">+40 745 123 456</a></li>
+                        <li>✉️ <a href="mailto:contact@gradinita-model.ro" class="gm-footer__link">contact@gradinita-model.ro</a></li>
                         <li>🕐 L-V: 07:30 - 17:30</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
+
+            <div class="gm-footer__bottom">
                 <p>&copy; 2025 Grădinița Model, Târgoviște. Toate drepturile rezervate.</p>
-                <p><a href="politica-confidentialitate.html">Politica de confidențialitate</a></p>
+                <p><a href="politica-confidentialitate.html" class="gm-footer__link">Politica de confidențialitate</a></p>
             </div>
         </div>
     </footer>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>

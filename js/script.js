@@ -1,96 +1,287 @@
-// ===================================
-// Grădinița Model — script.js
-// - Burger menu mobil (toggle + accesibilitate)
-// - Închidere la click pe link / în afară / Escape
-// - Marcarea linkului activ (desktop + mobil)
-// - Reset la resize (ieși din modul mobil)
-// ===================================
+/* ===================================
+   Grădinița Model - script.js
+   JavaScript optimizat - Burger + Lightbox + Read More
+   =================================== */
 
-(function () {
-  // Elemente cheie din header-ul tău existent
-  const menuToggle = document.querySelector('.menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const body = document.body;
+(function() {
+    'use strict';
 
-  if (!menuToggle || !mobileMenu) {
-    console.warn('[GM] Lipsesc .menu-toggle sau #mobile-menu în HTML.');
-    return;
-  }
-
-  const openMenu = () => {
-    mobileMenu.classList.add('active');
-    mobileMenu.setAttribute('aria-hidden', 'false');
-    menuToggle.setAttribute('aria-expanded', 'true');
-    body.classList.add('no-scroll');
-  };
-
-  const closeMenu = () => {
-    mobileMenu.classList.remove('active');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    body.classList.remove('no-scroll');
-  };
-
-  const toggleMenu = (e) => {
-    e && e.stopPropagation();
-    const isOpen = mobileMenu.classList.contains('active');
-    isOpen ? closeMenu() : openMenu();
-  };
-
-  // 1) Toggle pe buton
-  menuToggle.addEventListener('click', toggleMenu);
-
-  // 2) Închide când dai click pe un link din sertar
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', closeMenu);
-  });
-
-  // 3) Închide când dai click în afara sertarului
-  document.addEventListener('click', (e) => {
-    const isOpen = mobileMenu.classList.contains('active');
-    if (!isOpen) return;
-    if (mobileMenu.contains(e.target) || menuToggle.contains(e.target)) return;
-    closeMenu();
-  });
-
-  // 4) Închide cu Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-      closeMenu();
-      menuToggle.focus();
+    // ===== MOBILE MENU (BURGER) =====
+    function initMobileMenu() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+        
+        if (!menuToggle || !mobileMenu) return;
+        
+        // Toggle menu on button click
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const newState = !isExpanded;
+            
+            this.setAttribute('aria-expanded', newState);
+            mobileMenu.classList.toggle('active', newState);
+            mobileMenu.setAttribute('aria-hidden', !newState);
+            body.classList.toggle('no-scroll', newState);
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnToggle && mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Close menu on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+                menuToggle.focus();
+            }
+        });
+        
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            body.classList.remove('no-scroll');
+        }
     }
-  });
 
-  // 5) Marchează linkul activ (ambele meniuri)
-  const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-
-  const markActive = (root) => {
-    root.querySelectorAll('a[href]').forEach(link => {
-      const hrefAttr = (link.getAttribute('href') || '').toLowerCase();
-      const file = hrefAttr.split('/').pop();
-      if (file === current || (current === '' && file === 'index.html')) {
-        link.classList.add('active');
-      }
-    });
-  };
-
-  const desktopNav = document.querySelector('.nav-links');
-  if (desktopNav) markActive(desktopNav);
-  markActive(mobileMenu);
-
-  // 6) Reset la resize (dacă treci pe desktop, închide meniul mobil)
-  const MQ_DESKTOP = 768;
-  const handleResize = () => {
-    if (window.innerWidth >= MQ_DESKTOP) {
-      // asigură starea închisă în modul desktop
-      closeMenu();
+    // ===== GALLERY LIGHTBOX =====
+    function initLightbox() {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        let lightbox = document.getElementById('lightbox');
+        
+        if (galleryItems.length === 0) return;
+        
+        // Create lightbox if it doesn't exist
+        if (!lightbox) {
+            lightbox = createLightboxHTML();
+        }
+        
+        const lightboxImage = lightbox.querySelector('.lightbox-content');
+        const lightboxClose = lightbox.querySelector('.lightbox-close');
+        const lightboxPrev = lightbox.querySelector('.lightbox-prev');
+        const lightboxNext = lightbox.querySelector('.lightbox-next');
+        const body = document.body;
+        
+        let currentIndex = 0;
+        let images = [];
+        
+        // Prepare images array
+        galleryItems.forEach((item, index) => {
+            const img = item.querySelector('img');
+            if (img) {
+                images.push({
+                    full: img.getAttribute('data-full') || img.src,
+                    alt: img.alt || `Imagine ${index + 1}`
+                });
+            }
+            
+            // Open lightbox on click
+            item.addEventListener('click', function() {
+                openLightbox(index);
+            });
+            
+            // Keyboard accessibility
+            item.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openLightbox(index);
+                }
+            });
+        });
+        
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightboxImage();
+            lightbox.classList.add('active');
+            lightbox.setAttribute('aria-hidden', 'false');
+            body.classList.add('no-scroll');
+            lightboxClose.focus();
+            
+            // Trap focus inside lightbox
+            trapFocus(lightbox);
+        }
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            lightbox.setAttribute('aria-hidden', 'true');
+            body.classList.remove('no-scroll');
+            lightboxImage.src = '';
+            
+            // Return focus to the gallery item that was clicked
+            if (galleryItems[currentIndex]) {
+                galleryItems[currentIndex].focus();
+            }
+        }
+        
+        function updateLightboxImage() {
+            if (images[currentIndex]) {
+                lightboxImage.src = images[currentIndex].full;
+                lightboxImage.alt = images[currentIndex].alt;
+            }
+            
+            // Show/hide prev/next buttons
+            lightboxPrev.style.display = currentIndex > 0 ? 'flex' : 'none';
+            lightboxNext.style.display = currentIndex < images.length - 1 ? 'flex' : 'none';
+        }
+        
+        function showPrevImage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateLightboxImage();
+            }
+        }
+        
+        function showNextImage() {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+                updateLightboxImage();
+            }
+        }
+        
+        // Event listeners for lightbox controls
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', showPrevImage);
+        lightboxNext.addEventListener('click', showNextImage);
+        
+        // Close on background click
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+            
+            switch(e.key) {
+                case 'Escape':
+                    closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    showPrevImage();
+                    break;
+                case 'ArrowRight':
+                    showNextImage();
+                    break;
+            }
+        });
+        
+        // Simple swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        lightbox.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        lightbox.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    showNextImage();
+                } else {
+                    showPrevImage();
+                }
+            }
+        }
+        
+        // Focus trap
+        function trapFocus(element) {
+            const focusableElements = element.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            const firstFocusable = focusableElements[0];
+            const lastFocusable = focusableElements[focusableElements.length - 1];
+            
+            element.addEventListener('keydown', function(e) {
+                if (e.key !== 'Tab') return;
+                
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusable) {
+                        e.preventDefault();
+                        lastFocusable.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusable) {
+                        e.preventDefault();
+                        firstFocusable.focus();
+                    }
+                }
+            });
+        }
     }
-  };
-  window.addEventListener('resize', handleResize);
+    
+    // Create lightbox HTML if not present
+    function createLightboxHTML() {
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.className = 'lightbox';
+        lightbox.setAttribute('role', 'dialog');
+        lightbox.setAttribute('aria-modal', 'true');
+        lightbox.setAttribute('aria-label', 'Vizualizare imagine');
+        lightbox.setAttribute('aria-hidden', 'true');
+        
+        lightbox.innerHTML = `
+            <button class="lightbox-close" aria-label="Închide">×</button>
+            <button class="lightbox-prev" aria-label="Imaginea anterioară">‹</button>
+            <button class="lightbox-next" aria-label="Imaginea următoare">›</button>
+            <div class="lightbox-content-wrapper">
+                <img class="lightbox-content" src="" alt="" loading="eager">
+            </div>
+        `;
+        
+        document.body.appendChild(lightbox);
+        return lightbox;
+    }
 
-  // Inițializare
-  mobileMenu.setAttribute('aria-hidden', 'true');
-  menuToggle.setAttribute('aria-expanded', 'false');
+    // ===== "CITEȘTE MAI MULT" (READ MORE) =====
+    function initReadMore() {
+        const readMoreBtn = document.querySelector('.read-more-btn');
+        const fullText = document.querySelector('.about-text-full');
+        
+        if (!readMoreBtn || !fullText) return;
+        
+        readMoreBtn.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const newState = !isExpanded;
+            
+            this.setAttribute('aria-expanded', newState);
+            fullText.classList.toggle('show', newState);
+            
+            // Update button text
+            const btnText = this.querySelector('span');
+            if (btnText) {
+                btnText.textContent = newState ? 'Citește mai puțin' : 'Citește mai mult';
+            }
+            
+            // Scroll to button if collapsing
+            if (!newState) {
+                this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    }
 
   console.log('%c[GM] burger ready', 'color:#7BD389');
 })();

@@ -15,22 +15,28 @@
 <body>
     <a href="#main" class="skip-link">Sari la conținut</a>
     
-    <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Navigare principală">
         <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
-                <div class="logo-icon">🏫</div>
-                <span>Grădinița Model</span>
-            </a>
+            <div class="nav-left">
+                <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
+                    <div class="logo-icon">🏫</div>
+                    <span>Grădinița Model</span>
+                </a>
+            </div>
             
-            <ul class="nav-links">
-                <li><a href="despre.html">Despre</a></li>
-                <li><a href="programe.html">Programe</a></li>
-                <li><a href="activitati.html">Activități</a></li>
-                <li><a href="galerie.html">Galerie</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="inscrieri.html" class="btn-primary">Înscrie-ți copilul</a></li>
-            </ul>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="despre.html">Despre</a></li>
+                    <li><a href="programe.html">Programe</a></li>
+                    <li><a href="activitati.html">Activități</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <a href="inscrieri.html" class="btn-primary">Înscrie-ți copilul</a>
+            </div>
             
             <button class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu">
                 <span></span>
@@ -39,7 +45,7 @@
             </button>
         </div>
         
-        <div id="mobile-menu" class="mobile-menu">
+        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
             <a href="despre.html">Despre</a>
             <a href="programe.html">Programe</a>
             <a href="activitati.html">Activități</a>
@@ -49,11 +55,10 @@
         </div>
     </nav>
     
-    <!-- Page Header -->
     <header class="page-header">
         <div class="container">
             <h1>Politica de Confidențialitate</h1>
-            <p>Ultima actualizare: 25 Octombrie 2025</p>
+            <p>Ultima actualizare: 26 Octombrie 2025</p>
         </div>
     </header>
     
@@ -63,10 +68,9 @@
                 <div class="privacy-document">
                     <div class="privacy-intro">
                         <p>
-                            <strong>Grădinița Model</strong> (în continuare "noi", "nostru" sau "Grădinița") respectă 
-                            confidențialitatea informațiilor personale și se angajează să protejeze datele dumneavoastră 
-                            personale în conformitate cu Regulamentul General privind Protecția Datelor (GDPR - Regulamentul 
-                            UE 2016/679) și legislația română aplicabilă.
+                            <strong>Grădinița Model</strong> respectă confidențialitatea informațiilor personale și se angajează 
+                            să protejeze datele dumneavoastră personale în conformitate cu Regulamentul General privind Protecția 
+                            Datelor (GDPR - Regulamentul UE 2016/679) și legislația română aplicabilă.
                         </p>
                     </div>
 
@@ -75,8 +79,6 @@
                         <p><strong>Grădinița Model S.R.L.</strong></p>
                         <p>
                             <strong>Sediu:</strong> Str. Mihai Viteazul nr. 45, Târgoviște, Dâmbovița 130024, România<br>
-                            <strong>CUI:</strong> RO12345678<br>
-                            <strong>Nr. reg. com.:</strong> J15/123/2020<br>
                             <strong>Email:</strong> <a href="mailto:contact@gradinita-model.ro">contact@gradinita-model.ro</a><br>
                             <strong>Telefon:</strong> <a href="tel:+40745123456">+40 745 123 456</a>
                         </p>
@@ -93,7 +95,6 @@
                             <li>Număr de telefon</li>
                             <li>Adresă de domiciliu</li>
                             <li>Date din actul de identitate (CNP, seria și numărul CI/BI)</li>
-                            <li>Informații despre locul de muncă (opțional)</li>
                         </ul>
 
                         <h3>2.2. Date despre copii:</h3>
@@ -105,38 +106,27 @@
                             <li>Fotografii și înregistrări video (cu consimțământ separat)</li>
                             <li>Informații despre dezvoltarea și progresul educațional</li>
                         </ul>
-
-                        <h3>2.3. Date colectate automat pe site:</h3>
-                        <ul>
-                            <li>Adresă IP</li>
-                            <li>Tip de browser și dispozitiv</li>
-                            <li>Pagini vizitate și durata vizitei</li>
-                            <li>Date de referință (de unde ați accesat site-ul)</li>
-                        </ul>
                     </article>
 
                     <article class="privacy-section">
                         <h2>3. Scopul prelucrării datelor</h2>
                         <p>Prelucrăm datele dumneavoastră personale pentru următoarele scopuri:</p>
                         <ul>
-                            <li><strong>Înscrierea și administrarea copiilor:</strong> Pentru procesarea cererii de înscriere, gestionarea contractului educațional și comunicarea cu părinții</li>
-                            <li><strong>Îngrijirea și educarea copiilor:</strong> Pentru asigurarea unui mediu educațional sigur și adaptat nevoilor fiecărui copil</li>
-                            <li><strong>Sănătate și siguranță:</strong> Pentru gestionarea situațiilor medicale de urgență și respectarea protocoalelor de sănătate</li>
-                            <li><strong>Comunicare:</strong> Pentru trimiterea de informații despre activități, evenimente, anunțuri importante</li>
-                            <li><strong>Marketing (cu consimțământ):</strong> Pentru trimiterea de oferte, newsletter și materiale promoționale</li>
-                            <li><strong>Îmbunătățirea serviciilor:</strong> Pentru analiza și îmbunătățirea calității serviciilor educaționale</li>
-                            <li><strong>Obligații legale:</strong> Pentru respectarea legislației în vigoare (fiscale, contabile, educaționale)</li>
+                            <li><strong>Înscrierea și administrarea copiilor:</strong> Pentru procesarea cererii de înscriere și gestionarea contractului educațional</li>
+                            <li><strong>Îngrijirea și educarea copiilor:</strong> Pentru asigurarea unui mediu educațional sigur și adaptat</li>
+                            <li><strong>Sănătate și siguranță:</strong> Pentru gestionarea situațiilor medicale de urgență</li>
+                            <li><strong>Comunicare:</strong> Pentru trimiterea de informații despre activități și evenimente</li>
+                            <li><strong>Obligații legale:</strong> Pentru respectarea legislației în vigoare</li>
                         </ul>
                     </article>
 
                     <article class="privacy-section">
                         <h2>4. Temeiul juridic al prelucrării</h2>
-                        <p>Prelucrăm datele dumneavoastră pe baza următoarelor temeiuri legale:</p>
                         <ul>
-                            <li><strong>Executarea contractului:</strong> Pentru îndeplinirea obligațiilor contractuale privind serviciile educaționale</li>
-                            <li><strong>Consimțământ:</strong> Pentru activități de marketing, fotografii/video, comunicări opționale</li>
-                            <li><strong>Obligații legale:</strong> Pentru respectarea cerințelor legale (raportări către autorități, păstrare documente fiscale)</li>
-                            <li><strong>Interes legitim:</strong> Pentru îmbunătățirea serviciilor, securitatea copiilor și bunul mers al activității</li>
+                            <li><strong>Executarea contractului:</strong> Pentru îndeplinirea obligațiilor contractuale</li>
+                            <li><strong>Consimțământ:</strong> Pentru activități de marketing și fotografii/video</li>
+                            <li><strong>Obligații legale:</strong> Pentru respectarea cerințelor legale</li>
+                            <li><strong>Interes legitim:</strong> Pentru îmbunătățirea serviciilor și securitatea copiilor</li>
                         </ul>
                     </article>
 
@@ -144,9 +134,9 @@
                         <h2>5. Cui dezvăluim datele dumneavoastră</h2>
                         <p>Datele dumneavoastră pot fi transmise către:</p>
                         <ul>
-                            <li><strong>Personal autorizat:</strong> Educatoare, personal administrativ, medic, în limita necesară pentru îndeplinirea atribuțiilor</li>
-                            <li><strong>Autorități publice:</strong> Când este cerut de lege (ANAF, Poliție, Protecția Copilului, etc.)</li>
-                            <li><strong>Furnizori de servicii:</strong> Contabili, furnizori IT, servicii medicale (cu acorduri de confidențialitate)</li>
+                            <li><strong>Personal autorizat:</strong> Educatoare, personal administrativ, medic</li>
+                            <li><strong>Autorități publice:</strong> Când este cerut de lege</li>
+                            <li><strong>Furnizori de servicii:</strong> Contabili, furnizori IT (cu acorduri de confidențialitate)</li>
                             <li><strong>Servicii de urgență:</strong> În cazul unor situații medicale urgente</li>
                         </ul>
                         <p><strong>Nu vindem și nu partajăm datele dumneavoastră cu terțe părți în scopuri comerciale.</strong></p>
@@ -154,14 +144,11 @@
 
                     <article class="privacy-section">
                         <h2>6. Cât timp păstrăm datele</h2>
-                        <p>Păstrăm datele dumneavoastră pentru următoarele perioade:</p>
                         <ul>
                             <li><strong>Date contractuale și financiare:</strong> Minimum 10 ani (conform legislației fiscale)</li>
-                            <li><strong>Dosarul educațional al copilului:</strong> Pe durata frecventării grădiniței + 5 ani</li>
-                            <li><strong>Date medicale:</strong> Pe durata frecventării grădiniței + perioada prevăzută de lege</li>
-                            <li><strong>Consimțământ foto/video:</strong> Până la retragerea consimțământului sau finalizarea contractului</li>
+                            <li><strong>Dosarul educațional:</strong> Pe durata frecventării + 5 ani</li>
+                            <li><strong>Date medicale:</strong> Pe durata frecventării + perioada prevăzută de lege</li>
                             <li><strong>Date de marketing:</strong> Până la retragerea consimțământului</li>
-                            <li><strong>Date din formulare de contact:</strong> Maximum 2 ani de la ultimul contact</li>
                         </ul>
                     </article>
 
@@ -169,76 +156,34 @@
                         <h2>7. Drepturile dumneavoastră</h2>
                         <p>Conform GDPR, aveți următoarele drepturi:</p>
                         <ul>
-                            <li><strong>Dreptul de acces:</strong> Puteți solicita o copie a datelor pe care le deținem despre dumneavoastră</li>
-                            <li><strong>Dreptul la rectificare:</strong> Puteți solicita corectarea datelor inexacte sau incomplete</li>
-                            <li><strong>Dreptul la ștergere ("dreptul de a fi uitat"):</strong> Puteți solicita ștergerea datelor în anumite condiții</li>
-                            <li><strong>Dreptul la restricționarea prelucrării:</strong> Puteți solicita limitarea modului în care folosim datele</li>
-                            <li><strong>Dreptul la portabilitatea datelor:</strong> Puteți primi datele într-un format structurat</li>
-                            <li><strong>Dreptul la opoziție:</strong> Puteți vă opune prelucrării bazate pe interes legitim sau marketing direct</li>
+                            <li><strong>Dreptul de acces:</strong> Puteți solicita o copie a datelor</li>
+                            <li><strong>Dreptul la rectificare:</strong> Puteți solicita corectarea datelor inexacte</li>
+                            <li><strong>Dreptul la ștergere:</strong> Puteți solicita ștergerea datelor în anumite condiții</li>
+                            <li><strong>Dreptul la restricționarea prelucrării:</strong> Puteți solicita limitarea modului de utilizare</li>
                             <li><strong>Dreptul de a retrage consimțământul:</strong> Când prelucrarea se bazează pe consimțământ</li>
-                            <li><strong>Dreptul de a depune plângere:</strong> La Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)</li>
+                            <li><strong>Dreptul de a depune plângere:</strong> La ANSPDCP</li>
                         </ul>
                         <p>
-                            Pentru exercitarea acestor drepturi, ne puteți contacta la 
-                            <a href="mailto:contact@gradinita-model.ro">contact@gradinita-model.ro</a> sau 
-                            <a href="tel:+40745123456">+40 745 123 456</a>.
+                            Pentru exercitarea acestor drepturi, contactați-ne la 
+                            <a href="mailto:contact@gradinita-model.ro">contact@gradinita-model.ro</a>
                         </p>
                     </article>
 
                     <article class="privacy-section">
                         <h2>8. Securitatea datelor</h2>
-                        <p>Implementăm măsuri tehnice și organizatorice adecvate pentru protejarea datelor:</p>
+                        <p>Implementăm măsuri tehnice și organizatorice pentru protejarea datelor:</p>
                         <ul>
-                            <li>Criptare SSL pentru transmiterea datelor pe website</li>
-                            <li>Acces restricționat la date doar pentru personalul autorizat</li>
+                            <li>Criptare SSL pentru transmiterea datelor</li>
+                            <li>Acces restricționat doar pentru personalul autorizat</li>
                             <li>Sisteme de backup regulate</li>
-                            <li>Formare periodică a personalului în domeniul protecției datelor</li>
+                            <li>Formare periodică a personalului</li>
                             <li>Proceduri de răspuns la incidente de securitate</li>
-                            <li>Documente și fișiere stocate în condiții de siguranță</li>
                         </ul>
                     </article>
 
                     <article class="privacy-section">
-                        <h2>9. Cookie-uri</h2>
-                        <p>Website-ul nostru folosește cookie-uri pentru:</p>
-                        <ul>
-                            <li><strong>Cookie-uri esențiale:</strong> Necesare pentru funcționarea corectă a site-ului</li>
-                            <li><strong>Cookie-uri analitice:</strong> Pentru înțelegerea modului în care vizitatorii folosesc site-ul (cu consimțământ)</li>
-                        </ul>
-                        <p>Puteți controla și șterge cookie-urile prin setările browser-ului dumneavoastră.</p>
-                    </article>
-
-                    <article class="privacy-section">
-                        <h2>10. Fotografii și înregistrări video</h2>
-                        <p>
-                            Realizarea și utilizarea fotografiilor/înregistrărilor video cu copiii se face doar cu 
-                            <strong>consimțământul expres și scris</strong> al părinților/tutorilor legali. Puteți retrage 
-                            consimțământul oricând, caz în care vom înceta utilizarea acestor materiale și le vom șterge 
-                            din materiale viitoare (materialele deja publicate pot rămâne disponibile pentru perioade limitate).
-                        </p>
-                    </article>
-
-                    <article class="privacy-section">
-                        <h2>11. Transfer internațional de date</h2>
-                        <p>
-                            Nu transferăm datele dumneavoastră în afara Uniunii Europene sau Spațiului Economic European, 
-                            cu excepția cazului în care acest lucru este necesar pentru furnizarea de servicii (ex: servicii 
-                            cloud hosting) și numai către companii care oferă garanții adecvate de protecție.
-                        </p>
-                    </article>
-
-                    <article class="privacy-section">
-                        <h2>12. Modificări ale politicii de confidențialitate</h2>
-                        <p>
-                            Ne rezervăm dreptul de a actualiza această politică de confidențialitate. Orice modificare 
-                            va fi publicată pe această pagină cu data actualizării. Vă încurajăm să revedeți periodic 
-                            această pagină pentru a fi la curent cu modul în care protejăm informațiile dumneavoastră.
-                        </p>
-                    </article>
-
-                    <article class="privacy-section">
-                        <h2>13. Contact</h2>
-                        <p>Pentru orice întrebări legate de această politică de confidențialitate sau despre modul în care prelucrăm datele dumneavoastră, ne puteți contacta:</p>
+                        <h2>9. Contact</h2>
+                        <p>Pentru întrebări legate de această politică:</p>
                         <div class="contact-box">
                             <p>
                                 <strong>Grădinița Model S.R.L.</strong><br>
@@ -248,25 +193,18 @@
                                 <strong>Program:</strong> Luni - Vineri, 07:30 - 17:30
                             </p>
                         </div>
-                        <p style="margin-top: 1.5rem;">
-                            <strong>Autoritatea de supraveghere:</strong><br>
-                            Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)<br>
-                            <strong>Website:</strong> <a href="https://www.dataprotection.ro" target="_blank" rel="noopener">www.dataprotection.ro</a>
-                        </p>
                     </article>
 
                     <div class="privacy-footer">
-                        <p><strong>Ultima actualizare: 25 Octombrie 2025</strong></p>
+                        <p><strong>Ultima actualizare: 26 Octombrie 2025</strong></p>
                         <p>
-                            Prin utilizarea serviciilor noastre și furnizarea datelor personale, confirmați că ați citit 
-                            și înțeles această Politică de Confidențialitate.
+                            Prin utilizarea serviciilor noastre, confirmați că ați citit și înțeles această Politică de Confidențialitate.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content">
@@ -281,7 +219,6 @@
         </section>
     </main>
     
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">

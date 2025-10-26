@@ -18,19 +18,26 @@
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Navigare principală">
         <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
-                <div class="logo-icon">🏫</div>
-                <span>Grădinița Model</span>
-            </a>
+            <div class="nav-left">
+                <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
+                    <div class="logo-icon">🏫</div>
+                    <span>Grădinița Model</span>
+                </a>
+            </div>
             
-            <ul class="nav-links">
-                <li><a href="despre.html" class="active">Despre</a></li>
-                <li><a href="programe.html">Programe</a></li>
-                <li><a href="activitati.html">Activități</a></li>
-                <li><a href="galerie.html">Galerie</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="inscrieri.html" class="btn-primary">Înscrie-ți copilul</a></li>
-            </ul>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="despre.html" aria-current="page">Despre</a></li>
+                    <li><a href="programe.html">Programe</a></li>
+                    <li><a href="activitati.html">Activități</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <a href="inscrieri.html" class="btn-primary">Înscrie-ți copilul</a>
+            </div>
             
             <button class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu">
                 <span></span>
@@ -39,7 +46,7 @@
             </button>
         </div>
         
-        <div id="mobile-menu" class="mobile-menu">
+        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
             <a href="despre.html">Despre</a>
             <a href="programe.html">Programe</a>
             <a href="activitati.html">Activități</a>
@@ -49,7 +56,6 @@
         </div>
     </nav>
     
-    <!-- Page Header -->
     <header class="page-header">
         <div class="container">
             <h1>Despre Grădinița Model</h1>
@@ -59,16 +65,20 @@
     
     <main id="main">
         <!-- Mission Section -->
-        <section class="mission-section">
+        <section style="padding: 4rem 1.5rem;">
             <div class="container">
-                <div class="mission-content">
-                    <div class="mission-text">
-                        <h2>Misiunea noastră</h2>
+                <div class="about-text">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">Misiunea noastră</h2>
+                    
+                    <div class="about-text-short">
                         <p>
                             La Grădinița Model, credem că fiecare copil merită să exploreze, să creeze și să crească 
                             într-un mediu plin de căldură și încurajare. Echipa noastră de educatori dedicați oferă 
                             o educație timpurie de calitate, bazată pe respect, empatie și descoperire.
                         </p>
+                    </div>
+                    
+                    <div class="about-text-full">
                         <p>
                             În fiecare zi, copiii participă la activități variate care stimulează creativitatea, 
                             dezvoltă abilitățile sociale și pun bazele unei educații solide pentru viitor. Ne concentrăm 
@@ -76,247 +86,140 @@
                         </p>
                         <p>
                             Credem în puterea jocului ca principal instrument de învățare și în importanța unui mediu 
-                            sigur, cald și stimulativ pentru dezvoltarea copiilor în primii ani de viață.
+                            sigur, cald și stimulativ pentru dezvoltarea copiilor în primii ani de viață. Grădinița noastră 
+                            nu este doar un loc de educație, ci un al doilea cămin unde copiii se simt în siguranță, 
+                            iubiți și motivați să exploreze.
                         </p>
                     </div>
-                    <div class="mission-image">
-                        <div class="image-placeholder">👩‍🏫👨‍🏫</div>
-                    </div>
+                    
+                    <button class="read-more-btn" aria-expanded="false">
+                        <span class="read-more-text">Citește mai mult</span>
+                        <span class="arrow">▼</span>
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- Values Section -->
-        <section class="values-section">
+        <section style="background: var(--light); padding: 4rem 1.5rem;">
             <div class="container">
                 <h2 class="section-title">Valorile noastre</h2>
                 <p class="section-subtitle">Principiile care ne ghidează activitatea zilnică</p>
                 
-                <div class="values-grid">
-                    <div class="value-card">
-                        <div class="value-icon">❤️</div>
+                <div style="display: grid; gap: 2rem; margin-top: 2rem;">
+                    <div style="background: var(--white); padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(43, 47, 56, 0.08); text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">❤️</div>
                         <h3>Respect și empatie</h3>
-                        <p>Tratăm fiecare copil cu respect, înțelegere și căldură. Promovăm empatia și bunătatea în toate interacțiunile.</p>
+                        <p style="color: var(--gray); margin-top: 0.75rem;">Tratăm fiecare copil cu respect, înțelegere și căldură. Promovăm empatia și bunătatea în toate interacțiunile.</p>
                     </div>
                     
-                    <div class="value-card">
-                        <div class="value-icon">🌟</div>
+                    <div style="background: var(--white); padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(43, 47, 56, 0.08); text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🌟</div>
                         <h3>Creativitate</h3>
-                        <p>Încurajăm gândirea creativă și explorarea liberă. Fiecare copil este un artist în devenire.</p>
+                        <p style="color: var(--gray); margin-top: 0.75rem;">Încurajăm gândirea creativă și explorarea liberă. Fiecare copil este un artist în devenire.</p>
                     </div>
                     
-                    <div class="value-card">
-                        <div class="value-icon">🤝</div>
+                    <div style="background: var(--white); padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(43, 47, 56, 0.08); text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
                         <h3>Colaborare</h3>
-                        <p>Dezvoltăm abilități sociale prin jocuri de grup și activități colaborative. Învățăm să lucrăm împreună.</p>
+                        <p style="color: var(--gray); margin-top: 0.75rem;">Dezvoltăm abilități sociale prin jocuri de grup și activități colaborative. Învățăm să lucrăm împreună.</p>
                     </div>
                     
-                    <div class="value-card">
-                        <div class="value-icon">🔍</div>
+                    <div style="background: var(--white); padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(43, 47, 56, 0.08); text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
                         <h3>Curiozitate</h3>
-                        <p>Stimulăm dorința de a descoperi și a învăța. Fiecare întrebare este o oportunitate de explorare.</p>
-                    </div>
-                    
-                    <div class="value-card">
-                        <div class="value-icon">🛡️</div>
-                        <h3>Siguranță</h3>
-                        <p>Oferim un mediu sigur, curat și protejat unde părinții pot avea încredere deplină.</p>
-                    </div>
-                    
-                    <div class="value-card">
-                        <div class="value-icon">💬</div>
-                        <h3>Comunicare</h3>
-                        <p>Menținem o comunicare constantă și transparentă cu părinții. Sunteți partenerii noștri în educație.</p>
+                        <p style="color: var(--gray); margin-top: 0.75rem;">Stimulăm dorința de a descoperi și a învăța. Fiecare întrebare este o oportunitate de explorare.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Advantages Section -->
-        <section class="advantages-section">
+        <section style="padding: 4rem 1.5rem;">
             <div class="container">
                 <h2 class="section-title">De ce să ne alegi?</h2>
                 <p class="section-subtitle">Avantajele Grădiniței Model</p>
                 
-                <div class="advantages-list">
-                    <div class="advantage-item">
-                        <div class="advantage-icon">👥</div>
-                        <div class="advantage-content">
+                <div style="display: grid; gap: 2rem; margin-top: 2rem;">
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <div class="feature-content">
                             <h3>Grupe mici (max. 15 copii)</h3>
                             <p>
                                 Numărul redus de copii per grupă permite educatoarelor să ofere atenție personalizată 
-                                fiecărui copil. Cunoaștem nevoile, preferințele și ritmul de dezvoltare al fiecăruia și 
-                                adaptăm activitățile în consecință.
+                                fiecărui copil. Cunoaștem nevoile, preferințele și ritmul de dezvoltare al fiecăruia.
                             </p>
                         </div>
                     </div>
                     
-                    <div class="advantage-item">
-                        <div class="advantage-icon">🌳</div>
-                        <div class="advantage-content">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌳</div>
+                        <div class="feature-content">
                             <h3>Curte spațioasă și echipată</h3>
                             <p>
                                 Copiii petrec zilnic timp în curtea noastră amenajată cu echipamente moderne de joacă, 
-                                zonă verde și spațiu pentru jocuri de mișcare. Jocul în aer liber este esențial pentru 
-                                dezvoltarea sănătoasă.
+                                zonă verde și spațiu pentru jocuri de mișcare.
                             </p>
                         </div>
                     </div>
                     
-                    <div class="advantage-item">
-                        <div class="advantage-icon">🔒</div>
-                        <div class="advantage-content">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <div class="feature-content">
                             <h3>Siguranță și igienă</h3>
                             <p>
                                 Sistem de supraveghere video, acces controlat, personal calificat în prim-ajutor și 
-                                protocoale stricte de igienă. Spațiile sunt curate, aerisite și dezinfectate regulat.
+                                protocoale stricte de igienă. Spațiile sunt curate și dezinfectate regulat.
                             </p>
                         </div>
                     </div>
                     
-                    <div class="advantage-item">
-                        <div class="advantage-icon">🥗</div>
-                        <div class="advantage-content">
+                    <div class="feature-card">
+                        <div class="feature-icon">🥗</div>
+                        <div class="feature-content">
                             <h3>Meniu sănătos zilnic</h3>
                             <p>
                                 Preparăm zilnic mese proaspete și echilibrate cu ingrediente naturale, fără aditivi. 
-                                Meniul este variat, adaptat vârstei și aprobat de nutriționist. Respectăm orice 
-                                alergii sau restricții alimentare.
+                                Respectăm orice alergii sau restricții alimentare.
                             </p>
                         </div>
                     </div>
                     
-                    <div class="advantage-item">
-                        <div class="advantage-icon">👩‍🏫</div>
-                        <div class="advantage-content">
+                    <div class="feature-card">
+                        <div class="feature-icon">👩‍🏫</div>
+                        <div class="feature-content">
                             <h3>Educatori calificați și pasionați</h3>
                             <p>
                                 Echipa noastră este formată din educatori cu studii de specialitate, experiență și 
-                                pasiune pentru lucrul cu copiii. Participăm regulat la cursuri de perfecționare și 
-                                folosim metode moderne de predare.
+                                pasiune pentru lucrul cu copiii.
                             </p>
                         </div>
                     </div>
                     
-                    <div class="advantage-item">
-                        <div class="advantage-icon">📱</div>
-                        <div class="advantage-content">
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <div class="feature-content">
                             <h3>Comunicare constantă cu părinții</h3>
                             <p>
                                 Trimitem zilnic poze și informații despre activitățile copiilor. Organizăm întâlniri 
-                                individuale cu părinții și suntem întotdeauna disponibili pentru discuții. Transparența 
-                                este esențială pentru noi.
+                                individuale și suntem întotdeauna disponibili.
                             </p>
                         </div>
-                    </div>
-                    
-                    <div class="advantage-item">
-                        <div class="advantage-icon">🎨</div>
-                        <div class="advantage-content">
-                            <h3>Activități variate și stimulative</h3>
-                            <p>
-                                Program bogat care include artă, muzică, dans, engleză, STEM și multe altele. Fiecare 
-                                zi aduce noi experiențe de învățare prin joacă. Vezi toate activitățile 
-                                <a href="activitati.html" style="color: var(--green); text-decoration: underline;">aici</a>.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="advantage-item">
-                        <div class="advantage-icon">🏡</div>
-                        <div class="advantage-content">
-                            <h3>Atmosferă călduroasă și familiară</h3>
-                            <p>
-                                Grădinița noastră nu este doar un loc de educație, ci un al doilea cămin pentru copii. 
-                                Creăm o atmosferă plină de căldură, în care copiii se simt în siguranță, iubiți și 
-                                motivați să exploreze.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Section -->
-        <section class="team-section">
-            <div class="container">
-                <h2 class="section-title">Echipa noastră</h2>
-                <p class="section-subtitle">Educatori dedicați pasiunii lor</p>
-                
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="member-photo">👩‍🏫</div>
-                        <h3>Prof. Maria Georgescu</h3>
-                        <p class="member-role">Director & Educatoare Grupa Mare</p>
-                        <p class="member-bio">
-                            15 ani de experiență în educația timpurie. Absolventă de Pedagogie, cu specializare 
-                            în dezvoltarea timpurie a copilului.
-                        </p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <div class="member-photo">👩‍🏫</div>
-                        <h3>Educatoarea Ana Popescu</h3>
-                        <p class="member-role">Educatoare Grupa Mijlocie</p>
-                        <p class="member-bio">
-                            10 ani de experiență. Specializată în activități creative și dezvoltarea emoțională 
-                            a copiilor preșcolari.
-                        </p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <div class="member-photo">👩‍🏫</div>
-                        <h3>Educatoarea Ioana Dumitrescu</h3>
-                        <p class="member-role">Educatoare Grupa Mini</p>
-                        <p class="member-bio">
-                            8 ani de experiență cu copiii mici. Formată în metode Montessori și jocuri senzoriale 
-                            pentru vârste fragede.
-                        </p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <div class="member-photo">👨‍🏫</div>
-                        <h3>Prof. Andrei Ionescu</h3>
-                        <p class="member-role">Profesor de Educație Fizică</p>
-                        <p class="member-bio">
-                            Specialist în dezvoltarea motrică și dans pentru copii. Organizează activități de 
-                            mișcare și jocuri în aer liber.
-                        </p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <div class="member-photo">👩‍🏫</div>
-                        <h3>Teacher Sarah Johnson</h3>
-                        <p class="member-role">Profesoară de Limba Engleză</p>
-                        <p class="member-bio">
-                            Vorbitor nativ de limbă engleză cu experiență în predarea limbii engleze pentru 
-                            copii mici prin metode interactive.
-                        </p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <div class="member-photo">👨‍⚕️</div>
-                        <h3>Asist. Med. Mihai Popa</h3>
-                        <p class="member-role">Asistent Medical</p>
-                        <p class="member-bio">
-                            Prezent zilnic pentru orice nevoie medicală. Calificat în prim-ajutor și 
-                            îngrijirea copiilor.
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="cta-section">
+        <section style="background: linear-gradient(135deg, rgba(115, 184, 240, 0.1), rgba(123, 211, 137, 0.1)); padding: 4rem 1.5rem; text-align: center;">
             <div class="container">
-                <div class="cta-content">
-                    <h2>Vrei să ne cunoști personal?</h2>
-                    <p>Programează o vizită și descoperă cum arată o zi la Grădinița Model.</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn-primary">Programează o vizită</a>
-                        <a href="inscrieri.html" class="btn-secondary">Înscrie-ți copilul</a>
-                    </div>
+                <h2>Vrei să ne cunoști personal?</h2>
+                <p style="font-size: 1.125rem; color: var(--gray); margin: 1rem 0 2rem;">
+                    Programează o vizită și descoperă cum arată o zi la Grădinița Model.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn-primary">Programează o vizită</a>
+                    <a href="inscrieri.html" class="btn-secondary">Înscrie-ți copilul</a>
                 </div>
             </div>
         </section>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Înscrieri - Grădinița Model Târgoviște</title>
-    <meta name="description" content="Înscrie-ți copilul la Grădinița Model Târgoviște. Completează formularul de înscriere și te vom contacta pentru detalii.">
+    <meta name="description" content="Înscrie-ți copilul la Grădinița Model Târgoviște. Completează formularul de înscriere și te vom contacta în cel mai scurt timp.">
     <link rel="canonical" href="https://www.gradinita-model.ro/inscrieri.html">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏫%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,22 +15,28 @@
 <body>
     <a href="#main" class="skip-link">Sari la conținut</a>
     
-    <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Navigare principală">
         <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
-                <div class="logo-icon">🏫</div>
-                <span>Grădinița Model</span>
-            </a>
+            <div class="nav-left">
+                <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
+                    <div class="logo-icon">🏫</div>
+                    <span>Grădinița Model</span>
+                </a>
+            </div>
             
-            <ul class="nav-links">
-                <li><a href="despre.html">Despre</a></li>
-                <li><a href="programe.html">Programe</a></li>
-                <li><a href="activitati.html">Activități</a></li>
-                <li><a href="galerie.html">Galerie</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="inscrieri.html" class="btn-primary active">Înscrie-ți copilul</a></li>
-            </ul>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="despre.html">Despre</a></li>
+                    <li><a href="programe.html">Programe</a></li>
+                    <li><a href="activitati.html">Activități</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <a href="inscrieri.html" class="btn-primary" aria-current="page">Înscrie-ți copilul</a>
+            </div>
             
             <button class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu">
                 <span></span>
@@ -39,7 +45,7 @@
             </button>
         </div>
         
-        <div id="mobile-menu" class="mobile-menu">
+        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
             <a href="despre.html">Despre</a>
             <a href="programe.html">Programe</a>
             <a href="activitati.html">Activități</a>
@@ -49,7 +55,6 @@
         </div>
     </nav>
     
-    <!-- Page Header -->
     <header class="page-header">
         <div class="container">
             <h1>Înscrie-ți copilul</h1>
@@ -58,7 +63,6 @@
     </header>
     
     <main id="main">
-        <!-- Enrollment Process Section -->
         <section class="enrollment-process-section">
             <div class="container">
                 <h2 class="section-title">Procesul de înscriere</h2>
@@ -98,7 +102,71 @@
                     </div>
                 </div>
             </div>
-        <!-- Documents Required Section -->
+        </section>
+
+        <section class="enrollment-form-section">
+            <div class="container">
+                <h2 class="section-title">Formular de înscriere</h2>
+                <p class="section-subtitle">Completează câmpurile de mai jos și te vom contacta</p>
+                
+                <div class="form-container">
+                    <div id="form-feedback" class="form-feedback"></div>
+                    
+                    <form id="enrollment-form" novalidate>
+                        <div class="form-group">
+                            <label for="parent-name">Nume complet părinte *</label>
+                            <input type="text" id="parent-name" name="parent-name" required aria-required="true" placeholder="Ex: Maria Popescu">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="maria.popescu@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="07XX XXX XXX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="child-age">Vârsta copilului *</label>
+                            <select id="child-age" name="child-age" required aria-required="true">
+                                <option value="">Selectează vârsta</option>
+                                <option value="2">2 ani (Grupa Mini)</option>
+                                <option value="3">3 ani (Grupa Mijlocie)</option>
+                                <option value="4">4 ani (Grupa Mijlocie)</option>
+                                <option value="5">5 ani (Grupa Mare)</option>
+                                <option value="6">6 ani (Grupa Mare)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mesaj (opțional)</label>
+                            <textarea id="message" name="message" placeholder="Spune-ne mai multe despre nevoile copilului tău sau întreabă-ne orice..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="gdpr" name="gdpr" required aria-required="true">
+                            <label for="gdpr">
+                                Sunt de acord cu prelucrarea datelor personale conform 
+                                <a href="politica-confidentialitate.html">Politicii de confidențialitate</a> *
+                            </label>
+                        </div>
+                        
+                        <div class="form-note">
+                            <strong>📋 Protecția datelor:</strong> Datele tale personale vor fi folosite exclusiv pentru 
+                            procesul de înscriere și comunicare cu Grădinița Model. Nu le vom partaja cu terțe părți 
+                            fără acordul tău expres.
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            Trimite cererea de înscriere
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <section class="documents-section">
             <div class="container">
                 <h2 class="section-title">Documente necesare la înscriere</h2>
@@ -141,80 +209,9 @@
                         <p>2 fotografii recente tip buletin ale copilului</p>
                     </div>
                 </div>
-                
-                <div style="text-align: center; margin-top: 2rem;">
-                    <p style="color: var(--gray); margin-bottom: 1rem;">
-                        <strong>Notă:</strong> Lista completă și actualizată o primești după primul contact cu grădinița.
-                    </p>
-                </div>
             </div>
         </section>
 
-        <!-- FAQ for Enrollment -->
-        <section class="enrollment-faq-section">
-            <div class="container">
-                <h2 class="section-title">Întrebări frecvente despre înscriere</h2>
-                
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <h3>Există locuri disponibile?</h3>
-                        <p>
-                            Numărul de locuri variază în funcție de grupă și perioadă. Te rugăm să ne contactezi 
-                            pentru informații actualizate despre disponibilitate. De regulă, pentru anul școlar 
-                            nou (septembrie), recomandăm înscrieri din primăvară.
-                        </p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Care sunt tarifele de înscriere?</h3>
-                        <p>
-                            Tarifele includ: taxă de înscriere (o singură dată), taxă lunară (variază în funcție 
-                            de program: full-time sau part-time), și acoperă: toate mesele zilnice, activitățile 
-                            educaționale, materialele didactice și igienice. Pentru detalii exacte, te rugăm să 
-                            ne contactezi telefonic sau la vizită.
-                        </p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Pot înscrie copilul în orice moment al anului?</h3>
-                        <p>
-                            Da, acceptăm înscrieri pe tot parcursul anului școlar, în funcție de disponibilitatea 
-                            locurilor. Perioada de adaptare poate fi personalizată în funcție de nevoile copilului, 
-                            indiferent când începe să frecventeze grădinița.
-                        </p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Cum funcționează perioada de adaptare?</h3>
-                        <p>
-                            Prima săptămână este dedicată adaptării treptate: Ziua 1-2: câteva ore cu părintele 
-                            prezent, Ziua 3-4: câteva ore singur, Ziua 5+: program complet treptat. Fiecare copil 
-                            este diferit, așa că adaptăm ritmul la nevoile lui.
-                        </p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Există reduceri pentru frați?</h3>
-                        <p>
-                            Da, oferim reducere de 10% pentru al doilea copil din aceeași familie și 15% pentru 
-                            al treilea copil. De asemenea, avem reduceri pentru plata în avans a mai multor luni.
-                        </p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Ce se întâmplă dacă copilul se îmbolnăvește?</h3>
-                        <p>
-                            În cazul bolilor contagioase, copilul trebuie să stea acasă pentru protecția celorlalți. 
-                            Pentru absențe medicale de peste 5 zile consecutive (cu adeverință medicală), oferim 
-                            reducere proporțională la taxa lunară. Politica noastră completă de sănătate o discutăm 
-                            la înscriere.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content">
@@ -229,7 +226,6 @@
         </section>
     </main>
     
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -276,4 +272,4 @@
     
     <script src="js/script.js"></script>
 </body>
-</html><!-- Enrollment Form Section -->
+</html>

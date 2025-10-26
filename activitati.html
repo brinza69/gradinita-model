@@ -15,22 +15,28 @@
 <body>
     <a href="#main" class="skip-link">Sari la conținut</a>
     
-    <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Navigare principală">
         <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
-                <div class="logo-icon">🏫</div>
-                <span>Grădinița Model</span>
-            </a>
+            <div class="nav-left">
+                <a href="index.html" class="logo" aria-label="Grădinița Model - Acasă">
+                    <div class="logo-icon">🏫</div>
+                    <span>Grădinița Model</span>
+                </a>
+            </div>
             
-            <ul class="nav-links">
-                <li><a href="despre.html">Despre</a></li>
-                <li><a href="programe.html">Programe</a></li>
-                <li><a href="activitati.html" class="active">Activități</a></li>
-                <li><a href="galerie.html">Galerie</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="inscrieri.html" class="btn-primary">Înscrie-ți copilul</a></li>
-            </ul>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="despre.html">Despre</a></li>
+                    <li><a href="programe.html">Programe</a></li>
+                    <li><a href="activitati.html" aria-current="page">Activități</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <a href="inscrieri.html" class="btn-primary">Înscrie-ți copilul</a>
+            </div>
             
             <button class="menu-toggle" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu">
                 <span></span>
@@ -39,7 +45,7 @@
             </button>
         </div>
         
-        <div id="mobile-menu" class="mobile-menu">
+        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
             <a href="despre.html">Despre</a>
             <a href="programe.html">Programe</a>
             <a href="activitati.html">Activități</a>
@@ -49,7 +55,6 @@
         </div>
     </nav>
     
-    <!-- Page Header -->
     <header class="page-header">
         <div class="container">
             <h1>Activitățile noastre</h1>
@@ -58,280 +63,66 @@
     </header>
     
     <main id="main">
-        <!-- Activities Detail Section -->
-        <section class="activities-detail-section">
+        <section class="activities-section">
             <div class="container">
-                <!-- Limba Engleză -->
-                <article class="activity-detail">
-                    <div class="activity-detail-visual">
-                        <div class="activity-placeholder">🇬🇧</div>
-                    </div>
-                    <div class="activity-detail-content">
-                        <h2>Limba engleză</h2>
-                        <p class="activity-subtitle">Învățare naturală prin joacă și interacțiune</p>
-                        <p>
-                            Copiii se familiarizează cu limba engleză într-un mod natural și plăcut, prin cântece, 
-                            jocuri interactive și povești captivante. Profesoara noastră, vorbitor nativ, folosește 
-                            metode moderne adaptate vârstei preșcolare.
-                        </p>
-                        <div class="activity-benefits">
-                            <h3>Beneficii:</h3>
-                            <ul>
-                                <li>Dezvoltarea auzului fonetic de la vârste fragede</li>
-                                <li>Vocabular de bază în limba engleză (culori, numere, animale, familie)</li>
-                                <li>Încredere în comunicarea într-o limbă străină</li>
-                                <li>Deschidere către alte culturi</li>
-                            </ul>
-                        </div>
-                        <p class="activity-frequency">📅 <strong>Frecvență:</strong> 3 sesiuni pe săptămână, 30 minute</p>
-                    </div>
-                </article>
-
-                <!-- Dans și Mișcare -->
-                <article class="activity-detail">
-                    <div class="activity-detail-visual">
-                        <div class="activity-placeholder">💃</div>
-                    </div>
-                    <div class="activity-detail-content">
-                        <h2>Dans și mișcare</h2>
-                        <p class="activity-subtitle">Coordonare, echilibru și expresie corporală</p>
-                        <p>
-                            Sesiunile de dans și gimnastică ajută copiii să dezvolte coordonarea, echilibrul și 
-                            expresia corporală. Prin muzică variată și coregrafii adaptate vârstei, copiii învață 
-                            să își controleze mișcările și să se exprime prin dans.
-                        </p>
-                        <div class="activity-benefits">
-                            <h3>Beneficii:</h3>
-                            <ul>
-                                <li>Dezvoltare motrică generală și coordonare</li>
-                                <li>Simț ritmic și muzicalitate</li>
-                                <li>Expresie emoțională prin mișcare</li>
-                                <li>Încredere în propriul corp</li>
-                                <li>Energie pozitivă și bună dispoziție</li>
-                            </ul>
-                        </div>
-                        <p class="activity-frequency">📅 <strong>Frecvență:</strong> 2 sesiuni pe săptămână, 45 minute</p>
-                    </div>
-                </article>
-
-                <!-- Arte Plastice -->
-                <article class="activity-detail">
-                    <div class="activity-detail-visual">
-                        <div class="activity-placeholder">🎨</div>
-                    </div>
-                    <div class="activity-detail-content">
-                        <h2>Arte plastice</h2>
-                        <p class="activity-subtitle">Pictură, desen, modelaj și activități creative</p>
-                        <p>
-                            Atelierele de artă stimulează imaginația și creativitatea copiilor. Folosim tehnici 
-                            variate (pictură, desen, colaj, modelaj) și materiale sigure pentru a explora lumea 
-                            culorilor, formelor și texturilor. Fiecare copil este un artist în devenire!
-                        </p>
-                        <div class="activity-benefits">
-                            <h3>Beneficii:</h3>
-                            <ul>
-                                <li>Dezvoltarea motricității fine</li>
-                                <li>Stimularea imaginației și creativității</li>
-                                <li>Recunoașterea culorilor și formelor</li>
-                                <li>Exprimare emoțională prin artă</li>
-                                <li>Încredere în creațiile proprii</li>
-                            </ul>
-                        </div>
-                        <p class="activity-frequency">📅 <strong>Frecvență:</strong> Zilnic, integrate în programul educativ</p>
-                    </div>
-                </article>
-
-                <!-- Jocuri Senzoriale -->
-                <article class="activity-detail">
-                    <div class="activity-detail-visual">
-                        <div class="activity-placeholder">✋</div>
-                    </div>
-                    <div class="activity-detail-content">
-                        <h2>Jocuri senzoriale</h2>
-                        <p class="activity-subtitle">Explorare tactilă și stimulare senzorială</p>
-                        <p>
-                            Activitățile senzoriale permit copiilor să exploreze lumea prin simțuri: pipăit, văz, 
-                            auz, miros. Folosim materiale naturale (nisip, apă, semințe, țesături) și activități 
-                            Montessori pentru a stimula dezvoltarea senzorială și cognitivă.
-                        </p>
-                        <div class="activity-benefits">
-                            <h3>Beneficii:</h3>
-                            <ul>
-                                <li>Dezvoltarea tuturor simțurilor</li>
-                                <li>Calmarea și relaxarea copiilor</li>
-                                <li>Concentrare și atenție</li>
-                                <li>Explorare liberă și curiozitate</li>
-                                <li>Conexiuni neuronale și învățare</li>
-                            </ul>
-                        </div>
-                        <p class="activity-frequency">📅 <strong>Frecvență:</strong> Zilnic, în centre de activitate</p>
-                    </div>
-                </article>
-
-                <!-- STEM pentru copii -->
-                <article class="activity-detail">
-                    <div class="activity-detail-visual">
-                        <div class="activity-placeholder">🔬</div>
-                    </div>
-                    <div class="activity-detail-content">
-                        <h2>STEM pentru copii</h2>
-                        <p class="activity-subtitle">Știință, Tehnologie, Inginerie și Matematică</p>
-                        <p>
-                            Experimente simple, construcții și activități de tip STEM adaptate preșcolarilor. 
-                            Copiii descoperă principii științifice de bază prin joacă: flotare/scufundare, magneti, 
-                            cauză-efect, construcții cu diferite materiale.
-                        </p>
-                        <div class="activity-benefits">
-                            <h3>Beneficii:</h3>
-                            <ul>
-                                <li>Gândire logică și rezolvare de probleme</li>
-                                <li>Curiozitate științifică</li>
-                                <li>Înțelegerea cauzei și efectului</li>
-                                <li>Abilități de observație</li>
-                                <li>Bazele gândirii matematice și științifice</li>
-                            </ul>
-                        </div>
-                        <p class="activity-frequency">📅 <strong>Frecvență:</strong> 2 sesiuni pe săptămână, proiecte tematice</p>
-                    </div>
-                </article>
-
-                <!-- Povești Interactive -->
-                <article class="activity-detail">
-                    <div class="activity-detail-visual">
-                        <div class="activity-placeholder">📚</div>
-                    </div>
-                    <div class="activity-detail-content">
-                        <h2>Povești interactive</h2>
-                        <p class="activity-subtitle">Lectură animată și teatru de păpuși</p>
-                        <p>
-                            Povestile sunt esențiale pentru dezvoltarea limbajului și a imaginației. Citim zilnic 
-                            povești ilustrate, organizăm spectacole de teatru de păpuși și încurajăm copiii să 
-                            participe activ la naratiune. Copiii învață să asculte, să înțeleagă și să iubească cărțile.
-                        </p>
-                        <div class="activity-benefits">
-                            <h3>Beneficii:</h3>
-                            <ul>
-                                <li>Dezvoltarea vocabularului</li>
-                                <li>Înțelegerea narațiunii și secvențelor</li>
-                                <li>Imaginație și gândire abstractă</li>
-                                <li>Ascultare activă și concentrare</li>
-                                <li>Dragostea pentru lectură</li>
-                            </ul>
-                        </div>
-                        <p class="activity-frequency">📅 <strong>Frecvență:</strong> Zilnic, în programul educativ</p>
-                    </div>
-                </article>
-
-                <!-- Muzică -->
-                <article class="activity-detail">
-                    <div class="activity-detail-visual">
-                        <div class="activity-placeholder">🎵</div>
-                    </div>
-                    <div class="activity-detail-content">
-                        <h2>Educație muzicală</h2>
-                        <p class="activity-subtitle">Cântece, instrumente și explorare sonoră</p>
-                        <p>
-                            Muzica este prezentă zilnic în activitățile noastre. Copiii cântă, explorează instrumente 
-                            muzicale simple (xilofon, tamburină, maracas) și învață despre ritmuri, tonuri și melodii. 
-                            Muzica dezvoltă abilități cognitive și emoționale importante.
-                        </p>
-                        <div class="activity-benefits">
-                            <h3>Beneficii:</h3>
-                            <ul>
-                                <li>Dezvoltare auditivă și simț ritmic</li>
-                                <li>Memorie și concentrare</li>
-                                <li>Exprimare emoțională</li>
-                                <li>Coordonare și motricitate</li>
-                                <li>Bucurie și socializare prin cântec</li>
-                            </ul>
-                        </div>
-                        <p class="activity-frequency">📅 <strong>Frecvență:</strong> Zilnic, integrate în rutina zilnică</p>
-                    </div>
-                </article>
-
-                <!-- Activități în aer liber -->
-                <article class="activity-detail">
-                    <div class="activity-detail-visual">
-                        <div class="activity-placeholder">🌳</div>
-                    </div>
-                    <div class="activity-detail-content">
-                        <h2>Activități în aer liber</h2>
-                        <p class="activity-subtitle">Jocuri în curte și explorare naturii</p>
-                        <p>
-                            Copiii petrec zilnic timp în curtea noastră spațioasă, echipată cu jocuri moderne și 
-                            siguranță maximă. Jocurile în aer liber sunt esențiale pentru dezvoltarea fizică, 
-                            explorarea naturii și jocul liber nestructurat.
-                        </p>
-                        <div class="activity-benefits">
-                            <h3>Beneficii:</h3>
-                            <ul>
-                                <li>Dezvoltare fizică și motor</li>
-                                <li>Sistem imunitar puternic</li>
-                                <li>Conexiune cu natura</li>
-                                <li>Joc liber și creativitate</li>
-                                <li>Socializare naturală</li>
-                                <li>Vitamina D și aer curat</li>
-                            </ul>
-                        </div>
-                        <p class="activity-frequency">📅 <strong>Frecvență:</strong> Zilnic, minim 1-2 ore (în funcție de vreme)</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Program Saptamanal -->
-        <section class="weekly-schedule-section">
-            <div class="container">
-                <h2 class="section-title">Programul săptămânal orientativ</h2>
-                <p class="section-subtitle">Activitățile se rotesc și se adaptează în funcție de vârstă și nevoile copiilor</p>
-                
-                <div class="schedule-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Zi</th>
-                                <th>Dimineață (10:00-11:30)</th>
-                                <th>După-amiază (15:30-17:00)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Luni</strong></td>
-                                <td>Arte plastice + Muzică</td>
-                                <td>Limba engleză</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Marți</strong></td>
-                                <td>STEM + Jocuri senzoriale</td>
-                                <td>Dans și mișcare</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Miercuri</strong></td>
-                                <td>Povești interactive + Teatru</td>
-                                <td>Limba engleză</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Joi</strong></td>
-                                <td>Matematică aplicată + Jocuri logice</td>
-                                <td>Arte plastice</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Vineri</strong></td>
-                                <td>Proiect tematic săptămânal</td>
-                                <td>Dans și mișcare + Limba engleză</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="activities-grid">
+                    <article class="activity-card">
+                        <div class="activity-icon">🇬🇧</div>
+                        <h3>Limba engleză</h3>
+                        <p>Învățare naturală prin jocuri, cântece și povești interactive cu profesor nativ.</p>
+                    </article>
+                    
+                    <article class="activity-card">
+                        <div class="activity-icon">💃</div>
+                        <h3>Dans și mișcare</h3>
+                        <p>Coordonare, echilibru și expresie corporală prin muzică și coregrafii adaptate.</p>
+                    </article>
+                    
+                    <article class="activity-card">
+                        <div class="activity-icon">🎨</div>
+                        <h3>Arte plastice</h3>
+                        <p>Pictură, desen, modelaj și activități creative diverse pentru stimularea imaginației.</p>
+                    </article>
+                    
+                    <article class="activity-card">
+                        <div class="activity-icon">✋</div>
+                        <h3>Jocuri senzoriale</h3>
+                        <p>Explorare tactilă cu materiale naturale și activități Montessori pentru dezvoltare senzorială.</p>
+                    </article>
+                    
+                    <article class="activity-card">
+                        <div class="activity-icon">🔬</div>
+                        <h3>STEM pentru copii</h3>
+                        <p>Experimente simple, construcții și activități științifice adaptate preșcolarilor.</p>
+                    </article>
+                    
+                    <article class="activity-card">
+                        <div class="activity-icon">📚</div>
+                        <h3>Povești interactive</h3>
+                        <p>Lectură animată, teatru de păpuși și activități literare pentru dezvoltarea limbajului.</p>
+                    </article>
+                    
+                    <article class="activity-card">
+                        <div class="activity-icon">🎵</div>
+                        <h3>Educație muzicală</h3>
+                        <p>Cântece, instrumente muzicale simple și explorare sonoră pentru dezvoltare auditivă.</p>
+                    </article>
+                    
+                    <article class="activity-card">
+                        <div class="activity-icon">🌳</div>
+                        <h3>Activități în aer liber</h3>
+                        <p>Jocuri în curte, explorarea naturii și activități de mișcare pentru dezvoltare fizică.</p>
+                    </article>
+                    
+                    <article class="activity-card">
+                        <div class="activity-icon">🧩</div>
+                        <h3>Jocuri logice</h3>
+                        <p>Puzzle-uri, jocuri de sortare și activități pentru dezvoltarea gândirii logice.</p>
+                    </article>
                 </div>
-                
-                <p class="schedule-note">
-                    <strong>Notă:</strong> Activitățile în aer liber, muzica, povestile și jocurile senzoriale sunt 
-                    integrate zilnic în program. Programul este flexibil și se adaptează ritmului și nevoilor copiilor.
-                </p>
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content">
@@ -346,7 +137,6 @@
         </section>
     </main>
     
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
